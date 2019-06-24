@@ -43,6 +43,7 @@ body {
 }
 
 .hamburger-menu {
+  display: none;
   position: fixed;
   top: 10px;
   right: 10px;
@@ -52,6 +53,12 @@ body {
   color: white;
   font-size: 1.5rem;
   overflow: hidden;
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .hamburger-menu {
+    display: block;
+  }
 }
 
 .hamburger-menu .hamburger-btn, .hamburger-menu .close-btn {
@@ -176,7 +183,7 @@ main {
 section {
   position: absolute;
   width: 100vw;
-  height: 92vh;
+  height: 100vh;
   bottom: 0;
   left: -100vw;
   -webkit-transition: .6s ease-in-out;
@@ -274,7 +281,6 @@ section.about p {
 
 @media (max-width: 440px) and (max-height: 570px) {
   section.about p {
-    top: 5%;
     font-size: 1.1rem;
   }
 }
