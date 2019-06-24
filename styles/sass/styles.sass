@@ -1,0 +1,199 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+body 
+    overflow: hidden
+    background-color: black 
+    font-family: 'Roboto', sans-serif
+::selection 
+  color: black
+  background: white
+.nav 
+    position: fixed 
+    width: 100vw
+    height: 70px 
+    top: 0
+    left: 0 
+    z-index: 5 
+    transition: .3s linear
+    @media (orientation: landscape) and (max-width: 900px)
+        top: -80px 
+.nav.active
+    top: 0
+.hamburger-menu,
+    position: fixed 
+    top: 10px
+    right: 10px 
+    width: 40px
+    height: 40px
+    background-color: black
+    color: white
+    font-size: 1.5rem
+    overflow: hidden
+    .hamburger-btn, .close-btn
+        position: absolute 
+        top: 50%
+        left:  50%
+        transform: translate(-50%, -50%)
+        transition: .3s linear
+    .close-btn
+        transform: translate(-50%, -180%)
+    .hamburger-btn.active 
+        transform: translate(-50%, 180%) 
+    .close-btn.active
+        transform: translate(-50%, -50%)
+.btn 
+    position: absolute 
+    top: -30px 
+    left: 20px
+    width: 80px
+    height: 80px 
+    border-radius: 12%
+    transition: .3s linear
+    cursor: pointer 
+    color: white 
+    background-color: black
+    font-size: 2rem 
+    border: 1px solid white 
+    transition: .3s linear
+    i 
+        position: absolute 
+        bottom: 10px 
+        left: 50%
+        transform: translateX(-50%) 
+    @media (max-width: 440px) 
+        left: 4vw
+        top: -5vw
+        width: 20vw
+        height: 20vw    
+.btn.active
+    top: -10px
+    color: black
+    background-color: white
+    border-color: black
+    @media (max-width: 825px)
+        top: -20px
+    @media (max-width: 825px) and (orientation: portrait)
+        top: -1vh
+.btn:hover 
+    color: black
+    background-color: white
+    border-color: black
+.about-btn 
+    left: 120px
+    @media (max-width: 440px) 
+        left: 28vw
+.projects-btn 
+    left: 220px 
+    @media (max-width: 440px) 
+        left: 52vw
+.contact-btn 
+    left: 320px 
+    @media (max-width: 440px) 
+        left: 76vw
+main 
+    position: realtive
+    overflow: hidden
+section 
+    position: absolute
+    width: 100vw 
+    height: 92vh 
+    bottom: 0 
+    left: -100vw  
+    transition: .6s ease-in-out
+    opacity: 0 
+    background-color: black 
+    color: white 
+    h1 
+        position: absolute  
+        font-size: 5rem     
+section.active 
+    left: 0
+    opacity: 1
+section.go-right 
+    left: 100vw 
+section.home 
+    h1 
+        left: 40px 
+        top: 40% 
+        padding-right: 20px
+        @media (max-width: 825px) 
+            font-size: 3rem 
+        @media (orientation: portrait) and (max-width: 770px) 
+            top: calc(20vw + 3%)
+            width: 50% 
+        @media (max-width: 320px) 
+            font-size: 2.5rem
+            
+section.about 
+    overflow: hidden
+    p 
+        position: absolute 
+        top: 20% 
+        left: 5% 
+        width: 40% 
+        overflow: hidden
+        font-size: 2.5rem 
+        @media (max-width: 1024px) 
+            top: 10%
+            font-size: 2.2rem
+        @media (max-width: 825px) 
+            top: 15%
+            font-size: 1.3rem
+        @media (max-width: 675px) 
+            font-size: 1.2rem
+        @media (max-width: 675px) 
+            font-size: 1.1rem
+            width: 50%
+        @media (max-width: 440px) 
+            top: 14%
+            font-size: 1.3rem 
+        @media (max-width: 440px) and (max-height: 570px) 
+            top: 5%
+            font-size: 1.1rem
+    ul 
+        position: relative 
+        list-style: none 
+        li
+            position: fixed 
+            border-radius: 50%
+            background-color: white
+            opacity: .8
+        li.animate 
+            animation-name: bubbles
+            animation-iteration-count: infinite
+            animation-timing-function: linear
+    .animateDiv
+        position: fixed
+        top: 0
+        right: 0
+        height: 100vh
+        width: 300vw
+        background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1),rgba(0,0,0,1))
+        opacity: 1
+        z-index: 4
+    .animateDiv.animate
+        animation: moveRight 2.5s linear forwards
+@keyframes moveRight
+    100%
+        right: -300vw   
+@keyframes bubbles 
+    100% 
+        right: 50vw 
+        opacity: 0
+// section.projects 
+//     background-color: pink 
+section.contact 
+    h1  
+        top: 10% 
+        left: 50%
+        transform: translate(-50%, -0%) 
+    p 
+        position: absolute 
+        bottom: 5vh 
+        left: 0 
+        width: 100% 
+        height: 70vh 
+        padding: 20px
+   

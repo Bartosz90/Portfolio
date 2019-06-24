@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background-color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+::-moz-selection {
+  color: black;
+  background: white;
+}
+
+::selection {
+  color: black;
+  background: white;
+}
+
+.nav {
+  position: fixed;
+  width: 100vw;
+  height: 70px;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .nav {
+    top: -80px;
+  }
+}
+
+.nav.active {
+  top: 0;
+}
+
+.hamburger-menu {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+
+.hamburger-menu .hamburger-btn, .hamburger-menu .close-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+.hamburger-menu .close-btn {
+  -webkit-transform: translate(-50%, -180%);
+          transform: translate(-50%, -180%);
+}
+
+.hamburger-menu .hamburger-btn.active {
+  -webkit-transform: translate(-50%, 180%);
+          transform: translate(-50%, 180%);
+}
+
+.hamburger-menu .close-btn.active {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.btn {
+  position: absolute;
+  top: -30px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 12%;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  font-size: 2rem;
+  border: 1px solid white;
+  transition: .3s linear;
+}
+
+.btn i {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (max-width: 440px) {
+  .btn {
+    left: 4vw;
+    top: -5vw;
+    width: 20vw;
+    height: 20vw;
+  }
+}
+
+.btn.active {
+  top: -10px;
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+
+@media (max-width: 825px) {
+  .btn.active {
+    top: -20px;
+  }
+}
+
+@media (max-width: 825px) and (orientation: portrait) {
+  .btn.active {
+    top: -1vh;
+  }
+}
+
+.btn:hover {
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+
+.about-btn {
+  left: 120px;
+}
+
+@media (max-width: 440px) {
+  .about-btn {
+    left: 28vw;
+  }
+}
+
+.projects-btn {
+  left: 220px;
+}
+
+@media (max-width: 440px) {
+  .projects-btn {
+    left: 52vw;
+  }
+}
+
+.contact-btn {
+  left: 320px;
+}
+
+@media (max-width: 440px) {
+  .contact-btn {
+    left: 76vw;
+  }
+}
+
+main {
+  position: realtive;
+  overflow: hidden;
+}
+
+section {
+  position: absolute;
+  width: 100vw;
+  height: 92vh;
+  bottom: 0;
+  left: -100vw;
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+  opacity: 0;
+  background-color: black;
+  color: white;
+}
+
+section h1 {
+  position: absolute;
+  font-size: 5rem;
+}
+
+section.active {
+  left: 0;
+  opacity: 1;
+}
+
+section.go-right {
+  left: 100vw;
+}
+
+section.home h1 {
+  left: 40px;
+  top: 40%;
+  padding-right: 20px;
+}
+
+@media (max-width: 825px) {
+  section.home h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 770px) {
+  section.home h1 {
+    top: calc(20vw + 3%);
+    width: 50%;
+  }
+}
+
+@media (max-width: 320px) {
+  section.home h1 {
+    font-size: 2.5rem;
+  }
+}
+
+section.about {
+  overflow: hidden;
+}
+
+section.about p {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width: 40%;
+  overflow: hidden;
+  font-size: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+  section.about p {
+    top: 10%;
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 825px) {
+  section.about p {
+    top: 15%;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 675px) {
+  section.about p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 675px) {
+  section.about p {
+    font-size: 1.1rem;
+    width: 50%;
+  }
+}
+
+@media (max-width: 440px) {
+  section.about p {
+    top: 14%;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 440px) and (max-height: 570px) {
+  section.about p {
+    top: 5%;
+    font-size: 1.1rem;
+  }
+}
+
+section.about ul {
+  position: relative;
+  list-style: none;
+}
+
+section.about ul li {
+  position: fixed;
+  border-radius: 50%;
+  background-color: white;
+  opacity: .8;
+}
+
+section.about ul li.animate {
+  -webkit-animation-name: bubbles;
+          animation-name: bubbles;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+section.about .animateDiv {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 300vw;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(black), to(black));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), black, black);
+  opacity: 1;
+  z-index: 4;
+}
+
+section.about .animateDiv.animate {
+  -webkit-animation: moveRight 2.5s linear forwards;
+          animation: moveRight 2.5s linear forwards;
+}
+
+@-webkit-keyframes moveRight {
+  100% {
+    right: -300vw;
+  }
+}
+
+@keyframes moveRight {
+  100% {
+    right: -300vw;
+  }
+}
+
+@-webkit-keyframes bubbles {
+  100% {
+    right: 50vw;
+    opacity: 0;
+  }
+}
+
+@keyframes bubbles {
+  100% {
+    right: 50vw;
+    opacity: 0;
+  }
+}
+
+section.contact h1 {
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+}
+
+section.contact p {
+  position: absolute;
+  bottom: 5vh;
+  left: 0;
+  width: 100%;
+  height: 70vh;
+  padding: 20px;
+}
+/*# sourceMappingURL=styles.css.map */
