@@ -208,7 +208,7 @@ section.go-right {
 }
 
 section.home h1 {
-  left: 40px;
+  left: 20px;
   top: 40%;
   padding-right: 20px;
 }
@@ -221,8 +221,14 @@ section.home h1 {
 
 @media (orientation: portrait) and (max-width: 770px) {
   section.home h1 {
-    top: calc(20vw + 3%);
+    top: 100px;
     width: 50%;
+  }
+}
+
+@media (orientation: portrait) and (min-height: 730px) {
+  section.home h1 {
+    top: 200px;
   }
 }
 
@@ -262,20 +268,26 @@ section.about p {
 @media (max-width: 675px) {
   section.about p {
     font-size: 1.2rem;
+    width: 50%;
   }
 }
 
-@media (max-width: 675px) {
+@media (max-width: 535px) {
   section.about p {
-    font-size: 1.1rem;
-    width: 50%;
+    top: 10%;
   }
 }
 
 @media (max-width: 440px) {
   section.about p {
-    top: 14%;
+    top: 100px;
     font-size: 1.3rem;
+  }
+}
+
+@media (orientation: portrait) and (min-height: 730px) {
+  section.about p {
+    top: 200px;
   }
 }
 

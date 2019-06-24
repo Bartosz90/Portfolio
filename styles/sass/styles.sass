@@ -118,14 +118,16 @@ section.go-right
     left: 100vw 
 section.home 
     h1 
-        left: 40px 
+        left: 20px 
         top: 40% 
         padding-right: 20px
         @media (max-width: 825px) 
             font-size: 3rem 
         @media (orientation: portrait) and (max-width: 770px) 
-            top: calc(20vw + 3%)
+            top: 100px
             width: 50% 
+        @media (orientation: portrait) and (min-height: 730px) 
+            top: 200px
         @media (max-width: 320px) 
             font-size: 2.5rem
             
@@ -146,14 +148,15 @@ section.about
             font-size: 1.3rem
         @media (max-width: 675px) 
             font-size: 1.2rem
-        @media (max-width: 675px) 
-            font-size: 1.1rem
             width: 50%
+        @media (max-width: 535px)
+            top: 10%
         @media (max-width: 440px) 
-            top: 14%
+            top: 100px
             font-size: 1.3rem 
+        @media (orientation: portrait) and (min-height: 730px) 
+            top: 200px
         @media (max-width: 440px) and (max-height: 570px) 
-            // top: 5%
             font-size: 1.1rem
     ul 
         position: relative 
