@@ -247,7 +247,7 @@ section.about p {
   font-size: 2.5rem;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   section.about p {
     top: 15%;
     font-size: 2.1rem;
