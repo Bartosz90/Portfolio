@@ -197,6 +197,32 @@ section h1 {
   left: 20px;
   position: absolute;
   font-size: 5rem;
+  padding-right: 20px;
+}
+
+@media (max-width: 825px) {
+  section h1 {
+    top: 100px;
+    font-size: 3rem;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 770px) {
+  section h1 {
+    width: 50%;
+  }
+}
+
+@media (orientation: portrait) and (min-height: 730px) {
+  section h1 {
+    top: 200px;
+  }
+}
+
+@media (max-width: 320px) {
+  section h1 {
+    font-size: 2.5rem;
+  }
 }
 
 section.active {
@@ -206,36 +232,6 @@ section.active {
 
 section.go-right {
   left: 100vw;
-}
-
-section.home h1 {
-  top: 40%;
-  padding-right: 20px;
-}
-
-@media (max-width: 825px) {
-  section.home h1 {
-    font-size: 3rem;
-  }
-}
-
-@media (orientation: portrait) and (max-width: 770px) {
-  section.home h1 {
-    top: 100px;
-    width: 50%;
-  }
-}
-
-@media (orientation: portrait) and (min-height: 730px) {
-  section.home h1 {
-    top: 200px;
-  }
-}
-
-@media (max-width: 320px) {
-  section.home h1 {
-    font-size: 2.5rem;
-  }
 }
 
 section.about {
@@ -380,6 +376,24 @@ section.projects section.project {
   transition: 1s linear;
 }
 
+@media (orientation: portrait) {
+  section.projects section.project {
+    top: 140px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+  section.projects section.project {
+    top: 200px;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 330px) {
+  section.projects section.project {
+    height: 68%;
+  }
+}
+
 section.projects section.project.active {
   opacity: 1;
   z-index: 1;
@@ -410,15 +424,46 @@ section.projects .btn-next, section.projects .btn-prev {
           transform: translateY(-50%);
   cursor: pointer;
   color: white;
+  background-color: black;
+  border-radius: 50%;
   font-size: 3rem;
+  z-index: 1;
+}
+
+@media (orientation: portrait) and (max-width: 330px) {
+  section.projects .btn-next, section.projects .btn-prev {
+    font-size: 2.3rem;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 1024px) {
+  section.projects .btn-next, section.projects .btn-prev {
+    top: 55%;
+    font-size: 5rem;
+  }
 }
 
 section.projects .btn-prev {
   right: auto;
   left: 1%;
   display: none;
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
+  -webkit-transform: translateY(-50%) rotate(-180deg);
+          transform: translateY(-50%) rotate(-180deg);
+}
+
+@media (orientation: portrait) {
+  section.projects h1 {
+    left: 0;
+    top: 70px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (orientation: portrait) and (min-height: 800px) {
+  section.projects h1 {
+    top: 80px;
+  }
 }
 
 section.contact h1 {
