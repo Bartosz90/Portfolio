@@ -6,7 +6,6 @@
 }
 
 body {
-  overflow: hidden;
   background-color: black;
   font-family: 'Roboto', sans-serif;
 }
@@ -194,6 +193,8 @@ section {
 }
 
 section h1 {
+  top: 100px;
+  left: 20px;
   position: absolute;
   font-size: 5rem;
 }
@@ -208,7 +209,6 @@ section.go-right {
 }
 
 section.home h1 {
-  left: 20px;
   top: 40%;
   padding-right: 20px;
 }
@@ -319,6 +319,7 @@ section.about ul li.animate {
 }
 
 section.about .animateDiv {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -327,10 +328,10 @@ section.about .animateDiv {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(black), to(black));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), black, black);
   opacity: 1;
-  z-index: 4;
 }
 
 section.about .animateDiv.animate {
+  display: block;
   -webkit-animation: moveRight 2.5s linear forwards;
           animation: moveRight 2.5s linear forwards;
 }
@@ -359,6 +360,65 @@ section.about .animateDiv.animate {
     right: 50vw;
     opacity: 0;
   }
+}
+
+section.projects {
+  overflow: auto;
+}
+
+section.projects section.project {
+  left: 50%;
+  top: 200px;
+  height: 75%;
+  width: 90%;
+  background-color: red;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  overflow: visible;
+  z-index: 0;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+
+section.projects section.project.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+section.projects section.project-2 {
+  background-color: blue;
+}
+
+section.projects section.project-3 {
+  background-color: gray;
+}
+
+section.projects section.project-4 {
+  background-color: orange;
+}
+
+section.projects section.project-5 {
+  background-color: purple;
+}
+
+section.projects .btn-next, section.projects .btn-prev {
+  position: absolute;
+  top: 60%;
+  right: 1%;
+  opacity: 1;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+  color: white;
+  font-size: 3rem;
+}
+
+section.projects .btn-prev {
+  right: auto;
+  left: 1%;
+  display: none;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 
 section.contact h1 {

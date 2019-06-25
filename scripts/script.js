@@ -1,7 +1,7 @@
 // Navigation
 
 const btns = document.querySelectorAll(".btn");
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll(".main-section");
 let animatedLis = document.querySelectorAll(".about ul li");
 let isBubblesAnimationOn = false;
 const animateDiv = document.querySelector(".animateDiv");
@@ -95,3 +95,28 @@ bubblesAnimation = () => {
   }
 };
 window.onload = bubblesAnimation();
+
+// Project change
+
+const btnNext = document.querySelector(".btn-next");
+const btnPrev = document.querySelector(".btn-prev");
+let activeProjectId = 0;
+const changeProject = e => {
+  const projects = document.querySelectorAll(".project");
+  [...projects][activeProjectId].classList.remove("active");
+  e.target.dataset.action === "next" ? activeProjectId++ : activeProjectId--;
+  if (activeProjectId >= 1) {
+    btnPrev.style.display = "block";
+  } else {
+    btnPrev.style.display = "none";
+  }
+  if (activeProjectId == [...projects].length - 1) {
+    btnNext.style.display = "none";
+  } else {
+    btnNext.style.display = "block";
+  }
+  [...projects][activeProjectId].classList.add("active");
+};
+[...document.querySelectorAll(".change-project")].forEach(button => {
+  button.addEventListener("click", changeProject);
+});
