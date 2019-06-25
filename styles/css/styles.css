@@ -250,7 +250,7 @@ section.about p {
 @media (max-width: 1400px) {
   section.about p {
     top: 15%;
-    font-size: 2.1rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -382,15 +382,22 @@ section.projects section.project {
   }
 }
 
-@media (orientation: portrait) and (min-width: 768px) {
-  section.projects section.project {
-    top: 200px;
-  }
-}
-
 @media (orientation: portrait) and (max-width: 330px) {
   section.projects section.project {
     height: 68%;
+  }
+}
+
+@media (orientation: portrait) and (min-height: 600px) {
+  section.projects section.project {
+    height: 70%;
+    top: 165px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+  section.projects section.project {
+    top: 200px;
   }
 }
 
@@ -428,6 +435,11 @@ section.projects .btn-next, section.projects .btn-prev {
   border-radius: 50%;
   font-size: 3rem;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 @media (orientation: portrait) and (max-width: 330px) {
@@ -460,9 +472,9 @@ section.projects .btn-prev {
   }
 }
 
-@media (orientation: portrait) and (min-height: 800px) {
+@media (orientation: portrait) and (min-height: 600px) {
   section.projects h1 {
-    top: 80px;
+    top: 100px;
   }
 }
 
