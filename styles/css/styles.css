@@ -200,6 +200,12 @@ section h1 {
   padding-right: 20px;
 }
 
+@media (max-width: 1400px) {
+  section h1 {
+    font-size: 4rem;
+  }
+}
+
 @media (max-width: 825px) {
   section h1 {
     top: 120px;
@@ -227,6 +233,7 @@ section h1 {
 
 @media (max-width: 320px) {
   section h1 {
+    top: 90px;
     font-size: 2.5rem;
   }
 }
@@ -368,10 +375,16 @@ section.projects {
 }
 
 section.projects section.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   left: 50%;
   top: 200px;
   height: 75%;
   width: 90%;
+  padding: 20px;
   background-color: red;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -384,6 +397,9 @@ section.projects section.project {
 @media (orientation: portrait) {
   section.projects section.project {
     top: 140px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -403,6 +419,40 @@ section.projects section.project {
 @media (orientation: portrait) and (min-width: 768px) {
   section.projects section.project {
     top: 200px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1400px) {
+  section.projects section.project {
+    height: 70%;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 825px) {
+  section.projects section.project {
+    top: 90px;
+  }
+}
+
+section.projects section.project section.description, section.projects section.project section.demo {
+  position: static;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  height: 100%;
+  background-color: gray;
+  opacity: 1;
+}
+
+@media (orientation: portrait) {
+  section.projects section.project section.description {
+    display: none;
+  }
+}
+
+@media (orientation: portrait) {
+  section.projects section.project section.demo {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 
@@ -460,6 +510,12 @@ section.projects .btn-next, section.projects .btn-prev {
   }
 }
 
+@media (orientation: landscape) and (max-width: 825px) {
+  section.projects .btn-next, section.projects .btn-prev {
+    font-size: 2.3rem;
+  }
+}
+
 section.projects .btn-prev {
   right: auto;
   left: 1%;
@@ -468,18 +524,30 @@ section.projects .btn-prev {
           transform: translateY(-50%) rotate(-180deg);
 }
 
+section.projects h1 {
+  top: 10%;
+  left: 50%;
+  width: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 0;
+}
+
 @media (orientation: portrait) {
   section.projects h1 {
-    left: 0;
     top: 70px;
-    width: 100%;
-    text-align: center;
   }
 }
 
 @media (orientation: portrait) and (min-height: 600px) {
   section.projects h1 {
     top: 100px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 825px) {
+  section.projects h1 {
+    top: 20px;
   }
 }
 
