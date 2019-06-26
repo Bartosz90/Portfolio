@@ -482,13 +482,13 @@ section.projects section.project section.demo {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -ms-flex-line-pack: end;
-        align-content: flex-end;
+    -ms-flex-line-pack: center;
+        align-content: center;
     padding: 0;
   }
 }
 
-section.projects section.project section.demo a {
+section.projects section.project section.demo a, section.projects section.project section.demo p {
   display: block;
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
@@ -509,18 +509,29 @@ section.projects section.project section.demo a {
           box-shadow: 0px 0px 25px 5px white;
 }
 
-section.projects section.project section.demo a:hover {
+section.projects section.project section.demo a:hover, section.projects section.project section.demo p:hover {
   color: black;
   background-color: white;
   border-color: black;
 }
 
 @media (orientation: portrait) {
-  section.projects section.project section.demo a {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+  section.projects section.project section.demo a, section.projects section.project section.demo p {
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
     margin: 20px;
     opacity: 1;
+  }
+}
+
+section.projects section.project section.demo p {
+  display: none;
+}
+
+@media (orientation: portrait) {
+  section.projects section.project section.demo p {
+    display: block;
+    font-size: 1.5rem;
   }
 }
 
