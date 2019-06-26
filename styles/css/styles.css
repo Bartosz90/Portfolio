@@ -196,7 +196,7 @@ section h1 {
   left: 20px;
   position: absolute;
   font-size: 5rem;
-  padding-right: 20px;
+  padding-right: 40px;
 }
 
 @media (max-width: 1400px) {
@@ -465,16 +465,24 @@ section.projects section.project section.demo {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-bottom: 250px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  height: 70%;
   background-position: center;
   background-size: cover;
   -webkit-transition: .3s linear;
   transition: .3s linear;
+  -webkit-box-shadow: 0px 0px 55px 0px white;
+          box-shadow: 0px 0px 55px 0px white;
 }
 
 @media (orientation: portrait) {
@@ -482,9 +490,9 @@ section.projects section.project section.demo {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
     padding: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 }
 
@@ -568,6 +576,26 @@ section.projects section.project section.to-do {
 @media (orientation: portrait) {
   section.projects section.project section.to-do {
     background-image: url("../../images/to-do-small1.jpg");
+  }
+}
+
+section.projects section.project section.floating-chars {
+  background-image: url("../../images/floating-chars-large.png");
+}
+
+@media (orientation: portrait) {
+  section.projects section.project section.floating-chars {
+    background-image: url("../../images/floating-chars-small1.jpg");
+  }
+}
+
+section.projects section.project section.portfolio {
+  background-image: url("../../images/portfolio-large.png");
+}
+
+@media (orientation: portrait) {
+  section.projects section.project section.portfolio {
+    background-image: url("../../images/portfolio-small1.jpg");
   }
 }
 

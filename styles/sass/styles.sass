@@ -115,7 +115,7 @@ section
         left: 20px
         position: absolute  
         font-size: 5rem   
-        padding-right: 20px  
+        padding-right: 40px  
         @media (max-width: 1400px)
             font-size: 4rem
         @media (max-width: 825px) 
@@ -239,16 +239,20 @@ section.projects
         section.demo  
             display: flex 
             justify-content: space-around 
+            align-content: center
             align-items: flex-end 
             flex-wrap: wrap
-            padding-bottom: 250px
+            align-self: center
+            flex-basis: 35%
+            height: 70%
             background-position: center
             background-size: cover
             transition: .3s linear 
+            box-shadow: 0px 0px 55px 0px rgba(255,255,255,1)
             @media (orientation: portrait)
                 justify-content: center
-                align-content: center
                 padding: 0 
+                box-shadow: none
             a, p
                 display: block
                 flex-basis: 35% 
@@ -276,8 +280,6 @@ section.projects
                 filter: grayscale(100%)
             &:hover>a 
                 opacity: 1 
-            @media (orientation: portrait)
-                // filter: grayscale(100%)
         section.quiz 
             background-image: url('../../images/quiz-large.png')
             @media (orientation: portrait) 
@@ -286,6 +288,14 @@ section.projects
             background-image: url('../../images/to-do-large.png')
             @media (orientation: portrait) 
                 background-image: url('../../images/to-do-small1.jpg')
+        section.floating-chars 
+            background-image: url('../../images/floating-chars-large.png')
+            @media (orientation: portrait) 
+                background-image: url('../../images/floating-chars-small1.jpg')
+        section.portfolio
+            background-image: url('../../images/portfolio-large.png')
+            @media (orientation: portrait) 
+                background-image: url('../../images/portfolio-small1.jpg')
     section.project.active 
         opacity: 1
         z-index: 1
