@@ -382,7 +382,7 @@ section.projects section.project {
   left: 50%;
   top: 200px;
   height: 75%;
-  width: 90%;
+  width: 85%;
   padding: 20px;
   background-color: black;
   -webkit-transform: translateX(-50%);
@@ -445,7 +445,7 @@ section.projects section.project section.description, section.projects section.p
 }
 
 section.projects section.project section.description {
-  padding-top: 150px;
+  padding-top: 100px;
   background-color: black;
 }
 
@@ -468,11 +468,24 @@ section.projects section.project section.demo {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-bottom: 250px;
   background-position: center;
   background-size: cover;
   -webkit-transition: .3s linear;
   transition: .3s linear;
+}
+
+@media (orientation: portrait) {
+  section.projects section.project section.demo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+    padding: 0;
+  }
 }
 
 section.projects section.project section.demo a {
@@ -492,12 +505,23 @@ section.projects section.project section.demo a {
   font-size: 2rem;
   border: 1px solid white;
   border-radius: 0;
+  -webkit-box-shadow: 0px 0px 25px 5px white;
+          box-shadow: 0px 0px 25px 5px white;
 }
 
 section.projects section.project section.demo a:hover {
   color: black;
   background-color: white;
   border-color: black;
+}
+
+@media (orientation: portrait) {
+  section.projects section.project section.demo a {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 20px;
+    opacity: 1;
+  }
 }
 
 @media (orientation: portrait) {
@@ -518,6 +542,22 @@ section.projects section.project section.demo:hover > a {
 
 section.projects section.project section.quiz {
   background-image: url("../../images/quiz-large.png");
+}
+
+@media (orientation: portrait) {
+  section.projects section.project section.quiz {
+    background-image: url("../../images/quiz-small1.jpg");
+  }
+}
+
+section.projects section.project section.to-do {
+  background-image: url("../../images/to-do-large.png");
+}
+
+@media (orientation: portrait) {
+  section.projects section.project section.to-do {
+    background-image: url("../../images/to-do-small1.jpg");
+  }
 }
 
 section.projects section.project.active {

@@ -200,7 +200,7 @@ section.projects
         left: 50%
         top: 200px
         height: 75%
-        width: 90%
+        width: 85%
         padding: 20px
         background-color: black
         transform: translateX(-50%)
@@ -230,7 +230,7 @@ section.projects
             background-color: gray
             opacity: 1
         section.description 
-            padding-top: 150px
+            padding-top: 100px
             background-color: black 
             @media (orientation: portrait)
                 display: none  
@@ -240,10 +240,15 @@ section.projects
             display: flex 
             justify-content: space-around 
             align-items: flex-end 
+            flex-wrap: wrap
             padding-bottom: 250px
             background-position: center
             background-size: cover
             transition: .3s linear 
+            @media (orientation: portrait)
+                justify-content: center
+                align-content: flex-end
+                padding: 0 
             a 
                 display: block
                 flex-basis: 35% 
@@ -252,18 +257,30 @@ section.projects
                 text-align: center 
                 opacity: 0
                 +buttons()
-                border-radius: 0
+                border-radius: 0 
+                box-shadow: 0px 0px 25px 5px rgba(255,255,255,1)
                 &:hover 
                     +buttonHover()
+                @media (orientation: portrait) 
+                    flex-basis: 100%
+                    margin: 20px
+                    opacity: 1
             @media (orientation: portrait)
                 flex-basis: 100%
             &:hover 
                 filter: grayscale(100%)
             &:hover>a 
-                opacity: 1
+                opacity: 1 
+            @media (orientation: portrait)
+                // filter: grayscale(100%)
         section.quiz 
             background-image: url('../../images/quiz-large.png')
-
+            @media (orientation: portrait) 
+                background-image: url('../../images/quiz-small1.jpg')
+        section.to-do 
+            background-image: url('../../images/to-do-large.png')
+            @media (orientation: portrait) 
+                background-image: url('../../images/to-do-small1.jpg')
     section.project.active 
         opacity: 1
         z-index: 1
