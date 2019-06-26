@@ -273,10 +273,16 @@ section.about p {
   }
 }
 
-@media (max-width: 440px) {
+@media (orientation: portrait) and (max-width: 440px) {
   section.about p {
     top: 100px;
     font-size: 1.4rem;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 320px) {
+  section.about p {
+    top: 70px;
   }
 }
 
