@@ -206,7 +206,6 @@ section.projects
         transform: translateX(-50%)
         overflow: visible
         z-index: 0
-        transition: 1s linear
         @media (orientation: portrait)
             top: 140px
             justify-content: center
@@ -248,7 +247,7 @@ section.projects
             background-position: center
             background-size: cover
             transition: .3s linear 
-            box-shadow: 0px 0px 55px 0px rgba(255,255,255,1)
+            box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.3)
             @media (orientation: portrait)
                 justify-content: center
                 padding: 0 
@@ -262,13 +261,32 @@ section.projects
                 opacity: 0
                 +buttons()
                 border-radius: 0 
-                box-shadow: 0px 0px 25px 5px rgba(255,255,255,1)
+                box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.3)
                 &:hover 
                     +buttonHover()
                 @media (orientation: portrait) 
                     flex-basis: 90%
                     margin: 20px
-                    opacity: 1
+                    opacity: 1 
+            a 
+                @media (orientation: portrait)
+                    animation: btn-shake 4s infinite 
+            a:nth-of-type(2)
+                @media (orientation: portrait)
+                    animation-delay: 1s
+            @keyframes btn-shake 
+                0%
+                    transform: translateX(-3%)
+                1%
+                    transform: translateX(3%)
+                2%
+                    transform: translateX(-3%)
+                3%
+                    transform: translateX(3%)
+                4%
+                    transform: translateX(0%)
+                100%
+                    transform: translateX(0%)
             p 
                 display: none 
                 @media (orientation: portrait)
@@ -305,9 +323,8 @@ section.projects
         right: 1% 
         opacity: 1
         transform: translateY(-50%)
-        cursor: pointer 
-        color: white
-        background-color: black
+        +buttons()
+        border: none
         border-radius: 50%
         font-size: 3rem
         z-index: 1
