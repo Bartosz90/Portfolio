@@ -1,3 +1,15 @@
+=buttonHover()
+    color: black
+    background-color: white
+    border-color: black 
+=buttons() 
+    border-radius: 12%
+    transition: .3s linear
+    cursor: pointer 
+    color: white 
+    background-color: black
+    font-size: 2rem 
+    border: 1px solid white
 *
     margin: 0
     padding: 0
@@ -51,14 +63,7 @@ body
     left: 20px
     width: 80px
     height: 80px 
-    border-radius: 12%
-    transition: .3s linear
-    cursor: pointer 
-    color: white 
-    background-color: black
-    font-size: 2rem 
-    border: 1px solid white 
-    transition: .3s linear
+    +buttons()
     i 
         position: absolute 
         bottom: 10px 
@@ -79,9 +84,7 @@ body
     @media (max-width: 825px) and (orientation: portrait)
         top: -1vh
 .btn:hover 
-    color: black
-    background-color: white
-    border-color: black
+    +buttonHover()
 .about-btn 
     left: 120px
     @media (max-width: 440px) 
@@ -136,7 +139,7 @@ section.about
     overflow: hidden
     p 
         position: absolute 
-        top: 20% 
+        top: 30% 
         left: 5% 
         width: 40% 
         overflow: hidden
@@ -199,7 +202,7 @@ section.projects
         height: 75%
         width: 90%
         padding: 20px
-        background-color: red
+        background-color: black
         transform: translateX(-50%)
         overflow: visible
         z-index: 0
@@ -214,33 +217,56 @@ section.projects
             top: 165px
         @media (orientation: portrait) and (min-width: 768px)
             top: 200px
-        @media (orientation: landscape) and (max-width: 1400px)
+        @media (orientation: landscape) and (max-width: 1400px) 
+            top: 170px
             height: 70% 
         @media (orientation: landscape) and (max-width: 825px)
             top: 90px
         section.description, section.demo
             position: static
             flex-basis: 45%
-            height: 100%
+            height: 100% 
+            padding: 50px
             background-color: gray
             opacity: 1
         section.description 
+            padding-top: 150px
+            background-color: black 
             @media (orientation: portrait)
-                display: none 
-        section.demo 
+                display: none  
+            p 
+                font-size: 2.5rem
+        section.demo  
+            display: flex 
+            justify-content: space-around 
+            align-items: flex-end 
+            padding-bottom: 250px
+            background-position: center
+            background-size: cover
+            transition: .3s linear 
+            a 
+                display: block
+                flex-basis: 35% 
+                height: 70px 
+                line-height: 70px
+                text-align: center 
+                opacity: 0
+                +buttons()
+                border-radius: 0
+                &:hover 
+                    +buttonHover()
             @media (orientation: portrait)
                 flex-basis: 100%
+            &:hover 
+                filter: grayscale(100%)
+            &:hover>a 
+                opacity: 1
+        section.quiz 
+            background-image: url('../../images/quiz-large.png')
+
     section.project.active 
         opacity: 1
         z-index: 1
-    section.project-2
-        background-color: blue
-    section.project-3
-        background-color: gray
-    section.project-4
-        background-color: orange
-    section.project-5
-        background-color: purple
     .btn-next, .btn-prev
         position: absolute
         top: 60% 

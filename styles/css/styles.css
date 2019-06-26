@@ -99,7 +99,6 @@ body {
   background-color: black;
   font-size: 2rem;
   border: 1px solid white;
-  transition: .3s linear;
 }
 
 .btn i {
@@ -253,7 +252,7 @@ section.about {
 
 section.about p {
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 5%;
   width: 40%;
   overflow: hidden;
@@ -385,7 +384,7 @@ section.projects section.project {
   height: 75%;
   width: 90%;
   padding: 20px;
-  background-color: red;
+  background-color: black;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   overflow: visible;
@@ -424,6 +423,7 @@ section.projects section.project {
 
 @media (orientation: landscape) and (max-width: 1400px) {
   section.projects section.project {
+    top: 170px;
     height: 70%;
   }
 }
@@ -439,14 +439,65 @@ section.projects section.project section.description, section.projects section.p
   -ms-flex-preferred-size: 45%;
       flex-basis: 45%;
   height: 100%;
+  padding: 50px;
   background-color: gray;
   opacity: 1;
+}
+
+section.projects section.project section.description {
+  padding-top: 150px;
+  background-color: black;
 }
 
 @media (orientation: portrait) {
   section.projects section.project section.description {
     display: none;
   }
+}
+
+section.projects section.project section.description p {
+  font-size: 2.5rem;
+}
+
+section.projects section.project section.demo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 250px;
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+section.projects section.project section.demo a {
+  display: block;
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  opacity: 0;
+  border-radius: 12%;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  font-size: 2rem;
+  border: 1px solid white;
+  border-radius: 0;
+}
+
+section.projects section.project section.demo a:hover {
+  color: black;
+  background-color: white;
+  border-color: black;
 }
 
 @media (orientation: portrait) {
@@ -456,25 +507,22 @@ section.projects section.project section.description, section.projects section.p
   }
 }
 
+section.projects section.project section.demo:hover {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+section.projects section.project section.demo:hover > a {
+  opacity: 1;
+}
+
+section.projects section.project section.quiz {
+  background-image: url("../../images/quiz-large.png");
+}
+
 section.projects section.project.active {
   opacity: 1;
   z-index: 1;
-}
-
-section.projects section.project-2 {
-  background-color: blue;
-}
-
-section.projects section.project-3 {
-  background-color: gray;
-}
-
-section.projects section.project-4 {
-  background-color: orange;
-}
-
-section.projects section.project-5 {
-  background-color: purple;
 }
 
 section.projects .btn-next, section.projects .btn-prev {
