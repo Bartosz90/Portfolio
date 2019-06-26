@@ -493,6 +493,8 @@ section.projects section.project section.demo {
     padding: 0;
     -webkit-box-shadow: none;
             box-shadow: none;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
   }
 }
 
