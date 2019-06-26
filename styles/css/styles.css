@@ -438,7 +438,6 @@ section.projects section.project section.description, section.projects section.p
       flex-basis: 45%;
   height: 100%;
   padding: 50px;
-  background-color: gray;
   opacity: 1;
 }
 
@@ -485,6 +484,9 @@ section.projects section.project section.demo {
 
 @media (orientation: portrait) {
   section.projects section.project section.demo {
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+    height: 90%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -496,8 +498,8 @@ section.projects section.project section.demo {
 
 section.projects section.project section.demo a, section.projects section.project section.demo p {
   display: block;
-  -ms-flex-preferred-size: 35%;
-      flex-basis: 35%;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
   height: 70px;
   line-height: 70px;
   text-align: center;
@@ -525,13 +527,15 @@ section.projects section.project section.demo a:hover, section.projects section.
   section.projects section.project section.demo a, section.projects section.project section.demo p {
     -ms-flex-preferred-size: 90%;
         flex-basis: 90%;
-    margin: 20px;
     opacity: 1;
   }
 }
 
 @media (orientation: portrait) {
   section.projects section.project section.demo a {
+    -ms-flex-preferred-size: 43%;
+        flex-basis: 43%;
+    margin-top: 10px;
     -webkit-animation: btn-shake 4s infinite;
             animation: btn-shake 4s infinite;
   }
@@ -539,6 +543,7 @@ section.projects section.project section.demo a:hover, section.projects section.
 
 @media (orientation: portrait) {
   section.projects section.project section.demo a:nth-of-type(2) {
+    margin-left: 4%;
     -webkit-animation-delay: 1s;
             animation-delay: 1s;
   }

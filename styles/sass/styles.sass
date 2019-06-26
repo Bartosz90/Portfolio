@@ -226,7 +226,6 @@ section.projects
             flex-basis: 45%
             height: 100% 
             padding: 50px
-            background-color: gray
             opacity: 1
         section.description 
             padding-top: 100px
@@ -249,12 +248,14 @@ section.projects
             transition: .3s linear 
             box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.3)
             @media (orientation: portrait)
+                flex-basis: 90%
+                height: 90%
                 justify-content: center
                 padding: 0 
                 box-shadow: none
             a, p
                 display: block
-                flex-basis: 35% 
+                flex-basis: 45% 
                 height: 70px 
                 line-height: 70px
                 text-align: center 
@@ -266,13 +267,15 @@ section.projects
                     +buttonHover()
                 @media (orientation: portrait) 
                     flex-basis: 90%
-                    margin: 20px
                     opacity: 1 
             a 
                 @media (orientation: portrait)
+                    flex-basis: 43%
+                    margin-top: 10px
                     animation: btn-shake 4s infinite 
             a:nth-of-type(2)
                 @media (orientation: portrait)
+                    margin-left: 4%
                     animation-delay: 1s
             @keyframes btn-shake 
                 0%
