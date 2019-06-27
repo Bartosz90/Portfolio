@@ -810,16 +810,12 @@ section.projects .btn-next, section.projects .btn-prev {
 }
 
 section.projects .btn-next:hover, section.projects .btn-prev:hover {
-  color: black;
-  background-color: white;
-  border: 1px solid black;
+  color: lightgray;
 }
 
 @media (max-width: 1024px) {
   section.projects .btn-next:hover, section.projects .btn-prev:hover {
     color: white;
-    background-color: black;
-    border: none;
   }
 }
 
