@@ -265,6 +265,12 @@ section.about p {
   }
 }
 
+@media (max-width: 1024px) {
+  section.about p {
+    top: 100px;
+  }
+}
+
 @media (max-width: 825px) {
   section.about p {
     top: 30px;
@@ -453,6 +459,14 @@ section.projects section.project section.description, section.projects section.p
   }
 }
 
+@media (orientation: landscape) and (max-width: 1024px) {
+  section.projects section.project section.description, section.projects section.project section.demo {
+    height: 95%;
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+  }
+}
+
 section.projects section.project section.description {
   padding-top: 50px;
   background-color: black;
@@ -477,6 +491,31 @@ section.projects section.project section.description p {
 @media (orientation: landscape) and (max-width: 1400px) {
   section.projects section.project section.description p {
     font-size: 1.7rem;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1024px) {
+  section.projects section.project section.description p {
+    padding-top: 50px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 830px) {
+  section.projects section.project section.description p {
+    padding-top: 0px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 670px) {
+  section.projects section.project section.description p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 570px) {
+  section.projects section.project section.description p {
+    font-size: .9rem;
   }
 }
 
@@ -584,6 +623,13 @@ section.projects section.project section.demo a {
   }
 }
 
+@media (orientation: landscape) and (max-width: 1024px) {
+  section.projects section.project section.demo a {
+    -webkit-transform: translateY(0%) rotateY(-10deg);
+            transform: translateY(0%) rotateY(-10deg);
+  }
+}
+
 @media (orientation: portrait) {
   section.projects section.project section.demo a:nth-of-type(2) {
     margin-left: 4%;
@@ -595,6 +641,13 @@ section.projects section.project section.demo a {
 section.projects section.project section.demo a:nth-of-type(1) {
   -webkit-transform: translateY(-400%) rotateY(-10deg);
           transform: translateY(-400%) rotateY(-10deg);
+}
+
+@media (orientation: landscape) and (max-width: 1024px) {
+  section.projects section.project section.demo a:nth-of-type(1) {
+    -webkit-transform: translateY(0%) rotateY(-10deg);
+            transform: translateY(0%) rotateY(-10deg);
+  }
 }
 
 @-webkit-keyframes btn-shake {
