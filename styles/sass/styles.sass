@@ -1,7 +1,7 @@
 =buttonHover()
     color: black
     background-color: white
-    border-color: black 
+    border: 1px solid black 
 =buttons() 
     border-radius: 12%
     transition: .3s linear
@@ -253,7 +253,7 @@ section.projects
                     padding-top: 0px
                     font-size: 1.2rem
                 @media (orientation: landscape) and (max-width: 670px)
-                    font-size: 1.1rem
+                    font-size: 1rem
                 @media (orientation: landscape) and (max-width: 570px)
                     font-size: .9rem
         section.demo  
@@ -375,6 +375,10 @@ section.projects
         -webkit-tap-highlight-color: transparent
         &:hover 
            +buttonHover()
+           @media (max-width: 1024px)
+               color: white
+               background-color: black
+               border: none
         @media (orientation: portrait) and (max-width: 330px)
             font-size: 2.3rem
         @media (orientation: portrait) and (min-width: 1024px)

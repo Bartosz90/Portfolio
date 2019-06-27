@@ -140,7 +140,7 @@ body {
 .btn:hover {
   color: black;
   background-color: white;
-  border-color: black;
+  border: 1px solid black;
 }
 
 .about-btn {
@@ -509,7 +509,7 @@ section.projects section.project section.description p {
 
 @media (orientation: landscape) and (max-width: 670px) {
   section.projects section.project section.description p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 
@@ -597,7 +597,7 @@ section.projects section.project section.demo a, section.projects section.projec
 section.projects section.project section.demo a:hover, section.projects section.project section.demo p:hover {
   color: black;
   background-color: white;
-  border-color: black;
+  border: 1px solid black;
 }
 
 @media (orientation: portrait) {
@@ -817,7 +817,15 @@ section.projects .btn-next, section.projects .btn-prev {
 section.projects .btn-next:hover, section.projects .btn-prev:hover {
   color: black;
   background-color: white;
-  border-color: black;
+  border: 1px solid black;
+}
+
+@media (max-width: 1024px) {
+  section.projects .btn-next:hover, section.projects .btn-prev:hover {
+    color: white;
+    background-color: black;
+    border: none;
+  }
 }
 
 @media (orientation: portrait) and (max-width: 330px) {
