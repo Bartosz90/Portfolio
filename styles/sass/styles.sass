@@ -237,12 +237,11 @@ section.projects
                 height: 95% 
                 flex-basis: 47%
         section.description 
-            padding-top: 50px
+            display: flex 
+            align-items: center
             background-color: black 
             @media (orientation: portrait)
                 display: none  
-            @media (orientation: landscape) and (max-width: 1400px)
-                padding: 0px
             p 
                 font-size: 2rem
                 @media (orientation: landscape) and (max-width: 1400px)
@@ -252,7 +251,7 @@ section.projects
                 @media (orientation: landscape) and (max-width: 830px)
                     padding-top: 0px
                     font-size: 1.2rem
-                @media (orientation: landscape) and (max-width: 670px)
+                @media (orientation: landscape) and (max-width: 700px)
                     font-size: 1rem
                 @media (orientation: landscape) and (max-width: 570px)
                     font-size: .9rem

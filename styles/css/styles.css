@@ -468,19 +468,18 @@ section.projects section.project section.description, section.projects section.p
 }
 
 section.projects section.project section.description {
-  padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: black;
 }
 
 @media (orientation: portrait) {
   section.projects section.project section.description {
     display: none;
-  }
-}
-
-@media (orientation: landscape) and (max-width: 1400px) {
-  section.projects section.project section.description {
-    padding: 0px;
   }
 }
 
@@ -507,7 +506,7 @@ section.projects section.project section.description p {
   }
 }
 
-@media (orientation: landscape) and (max-width: 670px) {
+@media (orientation: landscape) and (max-width: 700px) {
   section.projects section.project section.description p {
     font-size: 1rem;
   }
