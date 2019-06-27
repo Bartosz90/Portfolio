@@ -229,16 +229,18 @@ section.projects
             flex-basis: 35%
             height: 70% 
             opacity: 1
+            @media (orientation: landscape) and (max-width: 1400px)
+                height: 80%
         section.description 
             padding-top: 50px
             background-color: black 
             @media (orientation: portrait)
                 display: none  
-            @media (max-width: 1400px)
+            @media (orientation: landscape) and (max-width: 1400px)
                 padding: 0px
             p 
                 font-size: 2rem
-                @media (max-width: 1400px)
+                @media (orientation: landscape) and (max-width: 1400px)
                     font-size: 1.7rem
         section.demo  
             display: flex 
@@ -272,7 +274,7 @@ section.projects
                 +buttons()
                 border-radius: 0 
                 box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.3)
-                @media (max-width: 1400px)
+                @media (orientation: landscape) and (max-width: 1400px)
                     flex-basis: 43%
                 &:hover 
                     +buttonHover()

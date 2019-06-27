@@ -447,6 +447,12 @@ section.projects section.project section.description, section.projects section.p
   opacity: 1;
 }
 
+@media (orientation: landscape) and (max-width: 1400px) {
+  section.projects section.project section.description, section.projects section.project section.demo {
+    height: 80%;
+  }
+}
+
 section.projects section.project section.description {
   padding-top: 50px;
   background-color: black;
@@ -458,7 +464,7 @@ section.projects section.project section.description {
   }
 }
 
-@media (max-width: 1400px) {
+@media (orientation: landscape) and (max-width: 1400px) {
   section.projects section.project section.description {
     padding: 0px;
   }
@@ -468,7 +474,7 @@ section.projects section.project section.description p {
   font-size: 2rem;
 }
 
-@media (max-width: 1400px) {
+@media (orientation: landscape) and (max-width: 1400px) {
   section.projects section.project section.description p {
     font-size: 1.7rem;
   }
@@ -542,7 +548,7 @@ section.projects section.project section.demo a, section.projects section.projec
           box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.3);
 }
 
-@media (max-width: 1400px) {
+@media (orientation: landscape) and (max-width: 1400px) {
   section.projects section.project section.demo a, section.projects section.project section.demo p {
     -ms-flex-preferred-size: 43%;
         flex-basis: 43%;
