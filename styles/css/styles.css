@@ -230,7 +230,7 @@ section h1 {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 340px) {
   section h1 {
     top: 90px;
     font-size: 2.3rem;
@@ -379,6 +379,9 @@ section.projects section.project {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   left: 50%;
   top: 200px;
   height: 75%;
@@ -389,6 +392,8 @@ section.projects section.project {
           transform: translateX(-50%);
   overflow: visible;
   z-index: 0;
+  -webkit-perspective: 400px;
+          perspective: 400px;
 }
 
 @media (orientation: portrait) {
@@ -397,6 +402,8 @@ section.projects section.project {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-perspective: none;
+            perspective: none;
   }
 }
 
@@ -434,15 +441,14 @@ section.projects section.project {
 
 section.projects section.project section.description, section.projects section.project section.demo {
   position: static;
-  -ms-flex-preferred-size: 45%;
-      flex-basis: 45%;
-  height: 100%;
-  padding: 50px;
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  height: 70%;
   opacity: 1;
 }
 
 section.projects section.project section.description {
-  padding-top: 100px;
+  padding-top: 50px;
   background-color: black;
 }
 
@@ -452,8 +458,20 @@ section.projects section.project section.description {
   }
 }
 
+@media (max-width: 1400px) {
+  section.projects section.project section.description {
+    padding: 0px;
+  }
+}
+
 section.projects section.project section.description p {
-  font-size: 2.5rem;
+  font-size: 2rem;
+}
+
+@media (max-width: 1400px) {
+  section.projects section.project section.description p {
+    font-size: 1.8rem;
+  }
 }
 
 section.projects section.project section.demo {
@@ -469,17 +487,19 @@ section.projects section.project section.demo {
           align-items: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-item-align: center;
-      align-self: center;
-  -ms-flex-preferred-size: 35%;
-      flex-basis: 35%;
-  height: 70%;
   background-position: center;
   background-size: cover;
-  -webkit-transition: .3s linear;
-  transition: .3s linear;
+  -webkit-transition: .6s linear;
+  transition: .6s linear;
   -webkit-box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.3);
           box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transform: rotateY(-10deg);
+          transform: rotateY(-10deg);
+  -webkit-perspective: 400px;
+          perspective: 400px;
 }
 
 @media (orientation: portrait) {
@@ -495,17 +515,20 @@ section.projects section.project section.demo {
             box-shadow: none;
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
+    -webkit-perspective: none;
+            perspective: none;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
 section.projects section.project section.demo a, section.projects section.project section.demo p {
   display: block;
-  -ms-flex-preferred-size: 45%;
-      flex-basis: 45%;
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
   height: 70px;
   line-height: 70px;
   text-align: center;
-  opacity: 0;
   border-radius: 12%;
   -webkit-transition: .3s linear;
   transition: .3s linear;
@@ -533,6 +556,11 @@ section.projects section.project section.demo a:hover, section.projects section.
   }
 }
 
+section.projects section.project section.demo a {
+  -webkit-transform: translateY(400%) rotateY(-10deg);
+          transform: translateY(400%) rotateY(-10deg);
+}
+
 @media (orientation: portrait) {
   section.projects section.project section.demo a {
     -ms-flex-preferred-size: 43%;
@@ -549,6 +577,11 @@ section.projects section.project section.demo a:hover, section.projects section.
     -webkit-animation-delay: 1s;
             animation-delay: 1s;
   }
+}
+
+section.projects section.project section.demo a:nth-of-type(1) {
+  -webkit-transform: translateY(-400%) rotateY(-10deg);
+          transform: translateY(-400%) rotateY(-10deg);
 }
 
 @-webkit-keyframes btn-shake {
@@ -623,17 +656,17 @@ section.projects section.project section.demo p {
   }
 }
 
-section.projects section.project section.demo:hover {
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-}
-
 section.projects section.project section.demo:hover > a {
-  opacity: 1;
+  -webkit-transform: translateY(0%) rotateY(-10deg);
+          transform: translateY(0%) rotateY(-10deg);
 }
 
 section.projects section.project section.quiz {
   background-image: url("../../images/quiz-large.png");
+}
+
+section.projects section.project section.quiz:hover {
+  background-image: url("../../images/quiz-large-blur.jpg");
 }
 
 @media (orientation: portrait) {
@@ -646,6 +679,10 @@ section.projects section.project section.to-do {
   background-image: url("../../images/to-do-large.png");
 }
 
+section.projects section.project section.to-do:hover {
+  background-image: url("../../images/to-do-large-blur.jpg");
+}
+
 @media (orientation: portrait) {
   section.projects section.project section.to-do {
     background-image: url("../../images/to-do-small1.jpg");
@@ -656,6 +693,10 @@ section.projects section.project section.floating-chars {
   background-image: url("../../images/floating-chars-large.png");
 }
 
+section.projects section.project section.floating-chars:hover {
+  background-image: url("../../images/floating-chars-large-blur.jpg");
+}
+
 @media (orientation: portrait) {
   section.projects section.project section.floating-chars {
     background-image: url("../../images/floating-chars-small1.jpg");
@@ -664,6 +705,10 @@ section.projects section.project section.floating-chars {
 
 section.projects section.project section.portfolio {
   background-image: url("../../images/portfolio-large.png");
+}
+
+section.projects section.project section.portfolio:hover {
+  background-image: url("../../images/portfolio-large-blur.jpg");
 }
 
 @media (orientation: portrait) {
@@ -701,6 +746,12 @@ section.projects .btn-next, section.projects .btn-prev {
       -ms-user-select: none;
           user-select: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+section.projects .btn-next:hover, section.projects .btn-prev:hover {
+  color: black;
+  background-color: white;
+  border-color: black;
 }
 
 @media (orientation: portrait) and (max-width: 330px) {
