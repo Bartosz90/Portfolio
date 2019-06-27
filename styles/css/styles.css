@@ -290,13 +290,13 @@ section.about p {
 @media (orientation: portrait) and (max-width: 440px) {
   section.about p {
     font-size: 1.4rem;
+    padding-top: 50px;
   }
 }
 
 @media (orientation: portrait) and (max-width: 380px) {
   section.about p {
     font-size: 1.4rem;
-    padding-top: 50px;
   }
 }
 
