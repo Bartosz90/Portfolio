@@ -239,7 +239,7 @@ section.projects
             p 
                 font-size: 2rem
                 @media (max-width: 1400px)
-                    font-size: 1.8rem
+                    font-size: 1.7rem
         section.demo  
             display: flex 
             justify-content: space-around 
@@ -272,7 +272,8 @@ section.projects
                 +buttons()
                 border-radius: 0 
                 box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.3)
-                
+                @media (max-width: 1400px)
+                    flex-basis: 43%
                 &:hover 
                     +buttonHover()
                 @media (orientation: portrait) 

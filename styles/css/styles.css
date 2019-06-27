@@ -470,7 +470,7 @@ section.projects section.project section.description p {
 
 @media (max-width: 1400px) {
   section.projects section.project section.description p {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -540,6 +540,13 @@ section.projects section.project section.demo a, section.projects section.projec
   border-radius: 0;
   -webkit-box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.3);
           box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 1400px) {
+  section.projects section.project section.demo a, section.projects section.project section.demo p {
+    -ms-flex-preferred-size: 43%;
+        flex-basis: 43%;
+  }
 }
 
 section.projects section.project section.demo a:hover, section.projects section.project section.demo p:hover {
