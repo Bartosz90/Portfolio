@@ -10,6 +10,12 @@
     background-color: black
     font-size: 2rem 
     border: 1px solid white
+=sectionHeader()
+    top: 10% 
+    left: 50% 
+    width: auto
+    transform: translateX(-50%)
+    padding: 0
 *
     margin: 0
     padding: 0
@@ -147,7 +153,6 @@ section.about
         font-size: 2.5rem 
         @media (max-width: 1400px) 
             font-size: 2.2rem
-        @media (max-width: 1024px)
         @media (max-width: 825px) 
             font-size: 1.3rem
         @media (max-width: 675px) 
@@ -283,7 +288,6 @@ section.projects
                 text-align: center 
                 +buttons()
                 border-radius: 0 
-                box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.3)
                 @media (orientation: landscape) and (max-width: 1400px)
                     flex-basis: 43%
                 &:hover 
@@ -325,6 +329,8 @@ section.projects
                 @media (orientation: portrait)
                     display: block
                     font-size: 1.5rem
+                    border: none
+                    background-color: rgba(0,0,0,.5)
             @media (orientation: portrait)
                 flex-basis: 100%
             &:hover>a
@@ -384,29 +390,96 @@ section.projects
         right: auto
         left: 1%
         display: none
-        transform: translateY(-50%) rotate(-180deg) 
-    h1  
-        top: 10% 
-        left: 50% 
-        width: auto
-        transform: translateX(-50%)
-        padding: 0
-        @media (orientation: portrait)
-            top: 70px  
-        @media (orientation: portrait) and (min-height: 600px)
-            top: 100px
-        @media (orientation: landscape) and (max-width: 825px)
-            top: 20px
+        transform: translateY(-50%) rotate(-180deg)
 section.contact 
-    h1  
-        top: 10% 
+    position: relative
+    height: 100vh
+    .scene 
+        position: relative
+        top: 50%
         left: 50%
-        transform: translate(-50%, -0%) 
-    p 
-        position: absolute 
-        bottom: 5vh 
-        left: 0 
-        width: 100% 
-        height: 70vh 
-        padding: 20px
-   
+        transform: translate(-50%, -50%)
+        width: 20vw
+        height: 20vw
+        perspective: 600px
+        div.cube 
+            width: 100%
+            height: 100%
+            position: relative
+            transform-style: preserve-3d
+            transform: translateZ(-10vw)
+            transition: transform 1s linear
+        div.cube__face 
+            position: absolute
+            width: 20vw
+            height: 20vw 
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 1px solid white
+        .cube__face--front  
+             transform: rotateY(0deg) translateZ(10vw)
+             background-color: rgba(0, 0, 0, 0.9)
+        .cube__face--right  
+            transform: rotateY( 90deg) translateZ(10vw)
+            background-color: rgba(0, 0, 0, 0.5)
+        .cube__face--back   
+            transform: rotateY(180deg) translateZ(10vw)
+            background-color: rgba(0, 0, 0, 0.9)
+        .cube__face--left   
+            transform: rotateY(-90deg) translateZ(10vw)
+            background-color: rgba(0, 0, 0, 0.9)
+        .cube__face--top    
+            transform: rotateX( 90deg) translateZ(10vw)
+            background-color: rgba(0, 0, 0, 0.9)
+        .cube__face--bottom 
+            transform: rotateX(-90deg) translateZ(10vw)
+            background-color: rgba(0, 0, 0, 0.9)
+        .cube.show-front   
+            transform: translateZ(-10vw) rotateY(0deg) 
+        .cube.show-right   
+            transform: translateZ(-10vw) rotateY(-90deg) 
+        .cube.show-back    
+            transform: translateZ(-10vw) rotateY(-180deg) 
+        .cube.show-left    
+            transform: translateZ(-10vw) rotateY(90deg) 
+        .cube.show-top     
+            transform: translateZ(-10vw) rotateX(-90deg) 
+        .cube.show-bottom  
+            transform: translateZ(-10vw) rotateX(90deg) 
+    div.rotate-btns
+        position: absolute
+        bottom: 30px
+        left: 50%
+        height: 70px
+        width: 50%
+        display: flex
+        justify-content: space-around
+        align-items: center
+        flex-wrap: wrap
+        transform: translateX(-50%)
+        @media (orientation: portrait)
+            width: 95%
+        @media (orientation: landscape) and (max-width: 825px)
+            width: 80%
+        .rotate-btn 
+            flex-basis: 15%
+            height: 30px
+            text-align: center
+            line-height: 30px
+            +buttons()
+            border-radius: 0%
+            font-size: 20px
+            &:hover
+                +buttonHover()
+            @media (orientation: portrait)
+                flex-basis: 26%
+                margin: 7px 0
+.projects h1, .contact h1
+    +sectionHeader()
+    @media (orientation: portrait)
+        top: 70px  
+    @media (orientation: portrait) and (min-height: 600px)
+        top: 100px
+    @media (orientation: landscape) and (max-width: 825px)
+        top: 20px

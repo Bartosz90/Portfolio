@@ -120,3 +120,14 @@ const changeProject = e => {
 [...document.querySelectorAll(".change-project")].forEach(button => {
   button.addEventListener("click", changeProject);
 });
+
+//cube rotate
+const rotateCube = e => {
+  const cube = document.querySelector(".cube");
+  console.log(e.target.dataset.rotate);
+  cube.className = `${e.target.dataset.rotate}`;
+};
+
+[...document.querySelectorAll(".rotate-btns")].forEach(btn => {
+  btn.addEventListener("click", rotateCube);
+});

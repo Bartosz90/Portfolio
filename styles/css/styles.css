@@ -578,8 +578,6 @@ section.projects section.project section.demo a, section.projects section.projec
   font-size: 2rem;
   border: 1px solid white;
   border-radius: 0;
-  -webkit-box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.3);
-          box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.3);
 }
 
 @media (orientation: landscape) and (max-width: 1400px) {
@@ -707,6 +705,8 @@ section.projects section.project section.demo p {
   section.projects section.project section.demo p {
     display: block;
     font-size: 1.5rem;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -846,7 +846,184 @@ section.projects .btn-prev {
           transform: translateY(-50%) rotate(-180deg);
 }
 
-section.projects h1 {
+section.contact {
+  position: relative;
+  height: 100vh;
+}
+
+section.contact .scene {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 20vw;
+  height: 20vw;
+  -webkit-perspective: 600px;
+          perspective: 600px;
+}
+
+section.contact .scene div.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translateZ(-10vw);
+          transform: translateZ(-10vw);
+  -webkit-transition: -webkit-transform 1s linear;
+  transition: -webkit-transform 1s linear;
+  transition: transform 1s linear;
+  transition: transform 1s linear, -webkit-transform 1s linear;
+}
+
+section.contact .scene div.cube__face {
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid white;
+}
+
+section.contact .scene .cube__face--front {
+  -webkit-transform: rotateY(0deg) translateZ(10vw);
+          transform: rotateY(0deg) translateZ(10vw);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+section.contact .scene .cube__face--right {
+  -webkit-transform: rotateY(90deg) translateZ(10vw);
+          transform: rotateY(90deg) translateZ(10vw);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+section.contact .scene .cube__face--back {
+  -webkit-transform: rotateY(180deg) translateZ(10vw);
+          transform: rotateY(180deg) translateZ(10vw);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+section.contact .scene .cube__face--left {
+  -webkit-transform: rotateY(-90deg) translateZ(10vw);
+          transform: rotateY(-90deg) translateZ(10vw);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+section.contact .scene .cube__face--top {
+  -webkit-transform: rotateX(90deg) translateZ(10vw);
+          transform: rotateX(90deg) translateZ(10vw);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+section.contact .scene .cube__face--bottom {
+  -webkit-transform: rotateX(-90deg) translateZ(10vw);
+          transform: rotateX(-90deg) translateZ(10vw);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+section.contact .scene .cube.show-front {
+  -webkit-transform: translateZ(-10vw) rotateY(0deg);
+          transform: translateZ(-10vw) rotateY(0deg);
+}
+
+section.contact .scene .cube.show-right {
+  -webkit-transform: translateZ(-10vw) rotateY(-90deg);
+          transform: translateZ(-10vw) rotateY(-90deg);
+}
+
+section.contact .scene .cube.show-back {
+  -webkit-transform: translateZ(-10vw) rotateY(-180deg);
+          transform: translateZ(-10vw) rotateY(-180deg);
+}
+
+section.contact .scene .cube.show-left {
+  -webkit-transform: translateZ(-10vw) rotateY(90deg);
+          transform: translateZ(-10vw) rotateY(90deg);
+}
+
+section.contact .scene .cube.show-top {
+  -webkit-transform: translateZ(-10vw) rotateX(-90deg);
+          transform: translateZ(-10vw) rotateX(-90deg);
+}
+
+section.contact .scene .cube.show-bottom {
+  -webkit-transform: translateZ(-10vw) rotateX(90deg);
+          transform: translateZ(-10vw) rotateX(90deg);
+}
+
+section.contact div.rotate-btns {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  height: 70px;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (orientation: portrait) {
+  section.contact div.rotate-btns {
+    width: 95%;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 825px) {
+  section.contact div.rotate-btns {
+    width: 80%;
+  }
+}
+
+section.contact div.rotate-btns .rotate-btn {
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 12%;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  font-size: 2rem;
+  border: 1px solid white;
+  border-radius: 0%;
+  font-size: 20px;
+}
+
+section.contact div.rotate-btns .rotate-btn:hover {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+
+@media (orientation: portrait) {
+  section.contact div.rotate-btns .rotate-btn {
+    -ms-flex-preferred-size: 26%;
+        flex-basis: 26%;
+    margin: 7px 0;
+  }
+}
+
+.projects h1, .contact h1 {
   top: 10%;
   left: 50%;
   width: auto;
@@ -856,36 +1033,20 @@ section.projects h1 {
 }
 
 @media (orientation: portrait) {
-  section.projects h1 {
+  .projects h1, .contact h1 {
     top: 70px;
   }
 }
 
 @media (orientation: portrait) and (min-height: 600px) {
-  section.projects h1 {
+  .projects h1, .contact h1 {
     top: 100px;
   }
 }
 
 @media (orientation: landscape) and (max-width: 825px) {
-  section.projects h1 {
+  .projects h1, .contact h1 {
     top: 20px;
   }
-}
-
-section.contact h1 {
-  top: 10%;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0%);
-          transform: translate(-50%, 0%);
-}
-
-section.contact p {
-  position: absolute;
-  bottom: 5vh;
-  left: 0;
-  width: 100%;
-  height: 70vh;
-  padding: 20px;
 }
 /*# sourceMappingURL=styles.css.map */

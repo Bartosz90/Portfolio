@@ -149,15 +149,24 @@
       </section>
       <section class="contact main-section">
         <h1>CONTACT</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
-          officia fuga ipsam consectetur quis error eaque dignissimos dolorem
-          odio laudantium illo deserunt nostrum vero dolorum, iure
-          necessitatibus. Necessitatibus, eius rem! Lorem ipsum dolor sit amet
-          consectetur, adipisicing elit. Totam distinctio in inventore atque
-          numquam error amet ipsum nulla quas, pariatur exercitationem itaque
-          laboriosam quia, saepe illo iste autem. Soluta, facilis.
-        </p>
+        <div class="scene">
+          <div class="cube">
+            <div class="cube__face cube__face--front">front</div>
+            <div class="cube__face cube__face--back">back</div>
+            <div class="cube__face cube__face--right">right</div>
+            <div class="cube__face cube__face--left">left</div>
+            <div class="cube__face cube__face--top">top</div>
+            <div class="cube__face cube__face--bottom">bottom</div>
+          </div>
+        </div>
+        <div class="rotate-btns">
+          <div class="rotate-btn" data-rotate="cube show-front">FRONT</div>
+          <div class="rotate-btn" data-rotate="cube show-back">BACK</div>
+          <div class="rotate-btn" data-rotate="cube show-left">LEFT</div>
+          <div class="rotate-btn" data-rotate="cube show-right">RIGHT</div>
+          <div class="rotate-btn" data-rotate="cube show-bottom">BOTTOM</div>
+          <div class="rotate-btn" data-rotate="cube show-top">TOP</div>
+        </div>
       </section>
     </main>
     <script src="scripts/script.js"></script>
