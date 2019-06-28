@@ -940,6 +940,10 @@ section.contact .scene div.cube__face a i {
   transition: .3s linear;
 }
 
+section.contact .scene div.cube__face p {
+  padding: 10px;
+}
+
 section.contact .scene div.cube__face .facebook:hover {
   color: #3b5998;
 }
