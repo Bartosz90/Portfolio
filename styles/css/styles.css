@@ -848,7 +848,19 @@ section.projects .btn-prev {
 
 section.contact {
   position: relative;
-  height: 85vh;
+  height: 100vh;
+}
+
+@media (orientation: portrait) {
+  section.contact {
+    height: 85vh;
+  }
+}
+
+@media (orientation: portrait) and (max-height: 600px) {
+  section.contact {
+    height: 75vh;
+  }
 }
 
 section.contact .scene {
