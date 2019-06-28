@@ -857,6 +857,12 @@ section.contact {
   }
 }
 
+@media (orientation: landscape) and (max-width: 825px) {
+  section.contact {
+    height: 90vh;
+  }
+}
+
 section.contact .scene {
   position: relative;
   top: 50%;
