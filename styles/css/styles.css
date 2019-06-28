@@ -919,9 +919,45 @@ section.contact .scene div.cube__face {
   }
 }
 
-section.contact .scene div.cube__face p {
+section.contact .scene div.cube__face p, section.contact .scene div.cube__face a {
   font-size: 20px;
   background-color: black;
+}
+
+section.contact .scene div.cube__face a {
+  font-size: 50px;
+  text-decoration: none;
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+section.contact .scene div.cube__face a i {
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+section.contact .scene div.cube__face .facebook:hover {
+  color: #3b5998;
+}
+
+section.contact .scene div.cube__face .github:hover {
+  color: #f00;
+}
+
+section.contact .scene div.cube__face .linkedin:hover {
+  color: #007bb5;
+}
+
+section.contact .scene div.cube__face .twitter:hover {
+  color: #1da1f2;
+}
+
+section.contact .scene div.cube__face .email:hover {
+  color: #e34e0e;
 }
 
 section.contact .scene .cube__face--front {
