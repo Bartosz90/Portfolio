@@ -848,7 +848,7 @@ section.projects .btn-prev {
 
 section.contact {
   position: relative;
-  height: 100vh;
+  height: 95vh;
 }
 
 section.contact .scene {
@@ -861,6 +861,13 @@ section.contact .scene {
   height: 20vw;
   -webkit-perspective: 600px;
           perspective: 600px;
+}
+
+@media (orientation: portrait) {
+  section.contact .scene {
+    width: 30vh;
+    height: 30vh;
+  }
 }
 
 section.contact .scene div.cube {
@@ -893,40 +900,94 @@ section.contact .scene div.cube__face {
   border: 1px solid white;
 }
 
+@media (orientation: portrait) {
+  section.contact .scene div.cube__face {
+    width: 30vh;
+    height: 30vh;
+  }
+}
+
+section.contact .scene div.cube__face p {
+  font-size: 20px;
+  background-color: black;
+}
+
 section.contact .scene .cube__face--front {
   -webkit-transform: rotateY(0deg) translateZ(10vw);
           transform: rotateY(0deg) translateZ(10vw);
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (orientation: portrait) {
+  section.contact .scene .cube__face--front {
+    -webkit-transform: rotateY(0deg) translateZ(15vh);
+            transform: rotateY(0deg) translateZ(15vh);
+  }
 }
 
 section.contact .scene .cube__face--right {
   -webkit-transform: rotateY(90deg) translateZ(10vw);
           transform: rotateY(90deg) translateZ(10vw);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (orientation: portrait) {
+  section.contact .scene .cube__face--right {
+    -webkit-transform: rotateY(90deg) translateZ(15vh);
+            transform: rotateY(90deg) translateZ(15vh);
+  }
 }
 
 section.contact .scene .cube__face--back {
   -webkit-transform: rotateY(180deg) translateZ(10vw);
           transform: rotateY(180deg) translateZ(10vw);
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (orientation: portrait) {
+  section.contact .scene .cube__face--back {
+    -webkit-transform: rotateY(180deg) translateZ(15vh);
+            transform: rotateY(180deg) translateZ(15vh);
+  }
 }
 
 section.contact .scene .cube__face--left {
   -webkit-transform: rotateY(-90deg) translateZ(10vw);
           transform: rotateY(-90deg) translateZ(10vw);
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (orientation: portrait) {
+  section.contact .scene .cube__face--left {
+    -webkit-transform: rotateY(-90deg) translateZ(15vh);
+            transform: rotateY(-90deg) translateZ(15vh);
+  }
 }
 
 section.contact .scene .cube__face--top {
   -webkit-transform: rotateX(90deg) translateZ(10vw);
           transform: rotateX(90deg) translateZ(10vw);
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (orientation: portrait) {
+  section.contact .scene .cube__face--top {
+    -webkit-transform: rotateX(90deg) translateZ(15vh);
+            transform: rotateX(90deg) translateZ(15vh);
+  }
 }
 
 section.contact .scene .cube__face--bottom {
   -webkit-transform: rotateX(-90deg) translateZ(10vw);
           transform: rotateX(-90deg) translateZ(10vw);
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (orientation: portrait) {
+  section.contact .scene .cube__face--bottom {
+    -webkit-transform: rotateX(-90deg) translateZ(15vh);
+            transform: rotateX(-90deg) translateZ(15vh);
+  }
 }
 
 section.contact .scene .cube.show-front {
@@ -934,9 +995,23 @@ section.contact .scene .cube.show-front {
           transform: translateZ(-10vw) rotateY(0deg);
 }
 
+@media (orientation: portrait) {
+  section.contact .scene .cube.show-front {
+    -webkit-transform: translateZ(-15vh) rotateY(0deg);
+            transform: translateZ(-15vh) rotateY(0deg);
+  }
+}
+
 section.contact .scene .cube.show-right {
   -webkit-transform: translateZ(-10vw) rotateY(-90deg);
           transform: translateZ(-10vw) rotateY(-90deg);
+}
+
+@media (orientation: portrait) {
+  section.contact .scene .cube.show-right {
+    -webkit-transform: translateZ(-15vh) rotateY(-90deg);
+            transform: translateZ(-15vh) rotateY(-90deg);
+  }
 }
 
 section.contact .scene .cube.show-back {
@@ -944,9 +1019,23 @@ section.contact .scene .cube.show-back {
           transform: translateZ(-10vw) rotateY(-180deg);
 }
 
+@media (orientation: portrait) {
+  section.contact .scene .cube.show-back {
+    -webkit-transform: translateZ(-15vh) rotateY(-180deg);
+            transform: translateZ(-15vh) rotateY(-180deg);
+  }
+}
+
 section.contact .scene .cube.show-left {
   -webkit-transform: translateZ(-10vw) rotateY(90deg);
           transform: translateZ(-10vw) rotateY(90deg);
+}
+
+@media (orientation: portrait) {
+  section.contact .scene .cube.show-left {
+    -webkit-transform: translateZ(-15vh) rotateY(90deg);
+            transform: translateZ(-15vh) rotateY(90deg);
+  }
 }
 
 section.contact .scene .cube.show-top {
@@ -954,9 +1043,23 @@ section.contact .scene .cube.show-top {
           transform: translateZ(-10vw) rotateX(-90deg);
 }
 
+@media (orientation: portrait) {
+  section.contact .scene .cube.show-top {
+    -webkit-transform: translateZ(-15vh) rotateX(-90deg);
+            transform: translateZ(-15vh) rotateX(-90deg);
+  }
+}
+
 section.contact .scene .cube.show-bottom {
   -webkit-transform: translateZ(-10vw) rotateX(90deg);
           transform: translateZ(-10vw) rotateX(90deg);
+}
+
+@media (orientation: portrait) {
+  section.contact .scene .cube.show-bottom {
+    -webkit-transform: translateZ(-15vh) rotateX(90deg);
+            transform: translateZ(-15vh) rotateX(90deg);
+  }
 }
 
 section.contact div.rotate-btns {
