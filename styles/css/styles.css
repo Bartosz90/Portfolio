@@ -859,7 +859,7 @@ section.contact {
 
 @media (orientation: portrait) and (max-height: 600px) {
   section.contact {
-    height: 75vh;
+    height: 80vh;
   }
 }
 
