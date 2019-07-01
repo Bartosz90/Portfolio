@@ -21,7 +21,15 @@
     display: flex
     justify-content: center
     align-items: center
-    padding: 0
+    padding: 0 
+=headerSizes() 
+    font-size: 5rem   
+    @media (max-width: 1400px)
+        font-size: 4rem
+    @media (max-width: 825px) 
+        font-size: 3rem 
+    @media (max-width: 340px) 
+        font-size: 2.3rem
 *
     margin: 0
     padding: 0
@@ -206,7 +214,8 @@ section.projects
     justify-content: center
     flex-wrap: wrap
     h1 
-        +sectionHeader()             
+        +sectionHeader()
+        +headerSizes()          
     section.project 
         display: flex
         justify-content: space-around 
@@ -243,7 +252,6 @@ section.projects
             flex-basis: 35%
             height: 70% 
             opacity: 1
-            overflow: hidden
             @media (orientation: landscape) and (max-width: 1400px)
                 height: 80%
             @media (orientation: landscape) and (max-width: 1024px)
@@ -279,6 +287,7 @@ section.projects
             filter: grayscale(100%)
             transform: rotateY(-10deg)
             perspective: 400px
+            overflow: hidden
             @media (orientation: portrait)
                 flex-basis: 90%
                 height: 90%
@@ -410,6 +419,7 @@ section.contact
         // height: 90vh 
     h1 
         +sectionHeader()
+        +headerSizes()
     .scene 
         // position: relative
         // top: 50%
