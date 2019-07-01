@@ -43,22 +43,48 @@ body
   background: white
 .nav 
     position: fixed 
-    width: 22vw
+    width: 100vw
     height: 70px 
     top: 0
     left: 0 
     z-index: 5 
     transition: .3s linear
     display: flex
-    justify-content: space-around
+    justify-content: flex-start
     @media (orientation: landscape) and (max-width: 1000px)
         top: -80px 
-        width: 50vw
+        width: 70vw
     @media (orientation: portrait)
         top: -80px 
-        width: 100vw
+        justify-content: space-around
 .nav.active
     top: 0
+.btn 
+    flex-basis: 80px
+    height: 80px 
+    transform: translateY(-30px)
+    margin: 0 10px
+    +buttons()
+    i 
+        position: absolute 
+        bottom: 10px 
+        left: 50%
+        transform: translateX(-50%) 
+    @media (max-width: 440px) 
+        transform: translateY(-5vw)
+        flex-basis: 20vw
+        height: 20vw    
+.btn.active
+    transform: translateY(-10px)
+    color: black
+    background-color: white
+    border-color: black
+    @media (max-width: 825px)
+        transform: translateY(-20px)
+    @media (max-width: 825px) and (orientation: portrait)
+        transform: translateY(-1vh)
+.btn:hover 
+    +buttonHover()
 .hamburger-menu,
     display: none
     position: fixed 
@@ -88,31 +114,6 @@ body
 .hamburger-menu.active 
     @media (orientation: portrait)
         top: 70px
-.btn 
-    transform: translateY(-30px)
-    flex-basis: 80px
-    height: 80px 
-    +buttons()
-    i 
-        position: absolute 
-        bottom: 10px 
-        left: 50%
-        transform: translateX(-50%) 
-    @media (max-width: 440px) 
-        transform: translateY(-5vw)
-        flex-basis: 20vw
-        height: 20vw    
-.btn.active
-    transform: translateY(-10px)
-    color: black
-    background-color: white
-    border-color: black
-    @media (max-width: 825px)
-        transform: translateY(-20px)
-    @media (max-width: 825px) and (orientation: portrait)
-        transform: translateY(-1vh)
-.btn:hover 
-    +buttonHover()
 main 
     position: relative
     width: 100vw
@@ -267,7 +268,7 @@ section.projects
                 @media (orientation: landscape) and (max-width: 1400px)
                     font-size: 1.7rem
                 @media (orientation: landscape) and (max-width: 1024px)
-                    padding-top: 50px
+                    // padding-top: 50px
                 @media (orientation: landscape) and (max-width: 830px)
                     padding-top: 0px
                     font-size: 1.2rem
