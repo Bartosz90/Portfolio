@@ -99,6 +99,19 @@ body {
   background-color: black;
   font-size: 2rem;
   border: 1px solid white;
+  outline-color: white;
+}
+
+@media (orientation: portrait) {
+  .btn {
+    outline: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .btn {
+    outline: none;
+  }
 }
 
 .btn i {
@@ -576,7 +589,20 @@ section.projects section.project section.demo a, section.projects section.projec
   background-color: black;
   font-size: 2rem;
   border: 1px solid white;
+  outline-color: white;
   border-radius: 0;
+}
+
+@media (orientation: portrait) {
+  section.projects section.project section.demo a, section.projects section.project section.demo p {
+    outline: none;
+  }
+}
+
+@media (max-width: 900px) {
+  section.projects section.project section.demo a, section.projects section.project section.demo p {
+    outline: none;
+  }
 }
 
 @media (orientation: landscape) and (max-width: 1400px) {
@@ -797,6 +823,7 @@ section.projects .btn-next, section.projects .btn-prev {
   background-color: black;
   font-size: 2rem;
   border: 1px solid white;
+  outline-color: white;
   border: none;
   border-radius: 50%;
   font-size: 3rem;
@@ -806,6 +833,18 @@ section.projects .btn-next, section.projects .btn-prev {
       -ms-user-select: none;
           user-select: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+@media (orientation: portrait) {
+  section.projects .btn-next, section.projects .btn-prev {
+    outline: none;
+  }
+}
+
+@media (max-width: 900px) {
+  section.projects .btn-next, section.projects .btn-prev {
+    outline: none;
+  }
 }
 
 section.projects .btn-next:hover, section.projects .btn-prev:hover {
@@ -1160,8 +1199,21 @@ section.contact div.rotate-btns .rotate-btn {
   background-color: black;
   font-size: 2rem;
   border: 1px solid white;
+  outline-color: white;
   border-radius: 0%;
   font-size: 20px;
+}
+
+@media (orientation: portrait) {
+  section.contact div.rotate-btns .rotate-btn {
+    outline: none;
+  }
+}
+
+@media (max-width: 900px) {
+  section.contact div.rotate-btns .rotate-btn {
+    outline: none;
+  }
 }
 
 section.contact div.rotate-btns .rotate-btn:hover {

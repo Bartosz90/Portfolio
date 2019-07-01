@@ -27,10 +27,12 @@
           <i class="fas fa-times-circle"></i>
         </div>
       </div>
-      <div class="btn home-btn active"><i class="fas fa-home"></i></div>
-      <div class="btn about-btn"><i class="far fa-user"></i></div>
-      <div class="btn projects-btn"><i class="fas fa-code"></i></div>
-      <div class="btn contact-btn"><i class="far fa-address-book"></i></div>
+      <button class="btn home-btn active"><i class="fas fa-home"></i></button>
+      <button class="btn about-btn"><i class="far fa-user"></i></button>
+      <button class="btn projects-btn"><i class="fas fa-code"></i></button>
+      <button class="btn contact-btn">
+        <i class="far fa-address-book"></i>
+      </button>
     </nav>
     <main>
       <section class="home active main-section"><h1></h1></section>
@@ -138,14 +140,14 @@
           </section>
         </section>
 
-        <i
+        <button
           class="btn-next fas fa-chevron-circle-right change-project"
           data-action="next"
-        ></i>
-        <i
+        ></button>
+        <button
           class="btn-prev fas fa-chevron-circle-right change-project"
           data-action="prev"
-        ></i>
+        ></button>
       </section>
       <section class="contact main-section">
         <h1>CONTACT</h1>
@@ -178,12 +180,18 @@
           </div>
         </div>
         <div class="rotate-btns">
-          <div class="rotate-btn" data-rotate="cube show-front">FRONT</div>
-          <div class="rotate-btn" data-rotate="cube show-back">BACK</div>
-          <div class="rotate-btn" data-rotate="cube show-left">LEFT</div>
-          <div class="rotate-btn" data-rotate="cube show-right">RIGHT</div>
-          <div class="rotate-btn" data-rotate="cube show-bottom">BOTTOM</div>
-          <div class="rotate-btn" data-rotate="cube show-top">TOP</div>
+          <button class="rotate-btn" data-rotate="cube show-front">
+            FRONT
+          </button>
+          <button class="rotate-btn" data-rotate="cube show-back">BACK</button>
+          <button class="rotate-btn" data-rotate="cube show-left">LEFT</button>
+          <button class="rotate-btn" data-rotate="cube show-right">
+            RIGHT
+          </button>
+          <button class="rotate-btn" data-rotate="cube show-bottom">
+            BOTTOM
+          </button>
+          <button class="rotate-btn" data-rotate="cube show-top">TOP</button>
         </div>
       </section>
     </main>
