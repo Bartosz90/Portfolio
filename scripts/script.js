@@ -16,7 +16,7 @@ function sectionSwitch() {
     isBubblesAnimationOn = false;
     isDivAnimationOn = false;
   }
-  // hamburger menu for landscape mobile screens
+  // hamburger menu for mobile screens
   [...document.querySelectorAll(".show-nav")].forEach(item => {
     item.classList.toggle("active");
   });
@@ -47,7 +47,7 @@ function sectionSwitch() {
 btns.forEach(btn => {
   btn.addEventListener("click", sectionSwitch);
 });
-// hamburger menu for landscape mobile screens
+// hamburger menu for mobile screens
 document.querySelector(".hamburger-menu").addEventListener("click", () => {
   [...document.querySelectorAll(".show-nav")].forEach(item => {
     item.classList.toggle("active");

@@ -23,18 +23,31 @@ body {
 
 .nav {
   position: fixed;
-  width: 100vw;
+  width: 22vw;
   height: 70px;
   top: 0;
   left: 0;
   z-index: 5;
   -webkit-transition: .3s linear;
   transition: .3s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-@media (orientation: landscape) and (max-width: 900px) {
+@media (orientation: landscape) and (max-width: 1000px) {
   .nav {
     top: -80px;
+    width: 50vw;
+  }
+}
+
+@media (orientation: portrait) {
+  .nav {
+    top: -80px;
+    width: 100vw;
   }
 }
 
@@ -49,12 +62,19 @@ body {
   right: 10px;
   width: 40px;
   height: 40px;
-  background-color: black;
   font-size: 1.5rem;
   overflow: hidden;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
 }
 
-@media (orientation: landscape) and (max-width: 900px) {
+@media (orientation: landscape) and (max-width: 1000px) {
+  .hamburger-menu {
+    display: block;
+  }
+}
+
+@media (orientation: portrait) {
   .hamburger-menu {
     display: block;
   }
@@ -85,11 +105,17 @@ body {
           transform: translate(-50%, -50%);
 }
 
+@media (orientation: portrait) {
+  .hamburger-menu.active {
+    top: 70px;
+  }
+}
+
 .btn {
-  position: absolute;
-  top: -30px;
-  left: 20px;
-  width: 80px;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  -ms-flex-preferred-size: 80px;
+      flex-basis: 80px;
   height: 80px;
   border-radius: 12%;
   -webkit-transition: .3s linear;
@@ -99,19 +125,12 @@ body {
   background-color: black;
   font-size: 2rem;
   border: 1px solid white;
-  outline-color: white;
+  outline: none;
 }
 
-@media (orientation: portrait) {
-  .btn {
-    outline: none;
-  }
-}
-
-@media (max-width: 900px) {
-  .btn {
-    outline: none;
-  }
+.btn:focus {
+  -webkit-box-shadow: 0px 0px 2px 2px white;
+          box-shadow: 0px 0px 2px 2px white;
 }
 
 .btn i {
@@ -124,15 +143,17 @@ body {
 
 @media (max-width: 440px) {
   .btn {
-    left: 4vw;
-    top: -5vw;
-    width: 20vw;
+    -webkit-transform: translateY(-5vw);
+            transform: translateY(-5vw);
+    -ms-flex-preferred-size: 20vw;
+        flex-basis: 20vw;
     height: 20vw;
   }
 }
 
 .btn.active {
-  top: -10px;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
   color: black;
   background-color: white;
   border-color: black;
@@ -140,13 +161,15 @@ body {
 
 @media (max-width: 825px) {
   .btn.active {
-    top: -20px;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
   }
 }
 
 @media (max-width: 825px) and (orientation: portrait) {
   .btn.active {
-    top: -1vh;
+    -webkit-transform: translateY(-1vh);
+            transform: translateY(-1vh);
   }
 }
 
@@ -156,44 +179,16 @@ body {
   border: 1px solid black;
 }
 
-.about-btn {
-  left: 120px;
-}
-
-@media (max-width: 440px) {
-  .about-btn {
-    left: 28vw;
-  }
-}
-
-.projects-btn {
-  left: 220px;
-}
-
-@media (max-width: 440px) {
-  .projects-btn {
-    left: 52vw;
-  }
-}
-
-.contact-btn {
-  left: 320px;
-}
-
-@media (max-width: 440px) {
-  .contact-btn {
-    left: 76vw;
-  }
-}
-
 main {
-  position: realtive;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
 }
 
 section {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   bottom: 0;
   left: -100vw;
@@ -203,48 +198,43 @@ section {
   background-color: black;
 }
 
-section h1 {
-  top: 40%;
-  left: 20px;
-  position: absolute;
+section.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.home h1 {
   font-size: 5rem;
-  padding-right: 40px;
+  padding: 0 40px 0 20px;
 }
 
 @media (max-width: 1400px) {
-  section h1 {
+  section.home h1 {
     font-size: 4rem;
   }
 }
 
 @media (max-width: 825px) {
-  section h1 {
-    top: 120px;
+  section.home h1 {
     font-size: 3rem;
   }
 }
 
 @media (orientation: portrait) and (max-width: 770px) {
-  section h1 {
+  section.home h1 {
     width: 50%;
   }
 }
 
-@media (orientation: portrait) and (max-width: 570px) {
-  section h1 {
-    top: 100px;
-  }
-}
-
-@media (orientation: portrait) and (min-height: 730px) {
-  section h1 {
-    top: 200px;
-  }
-}
-
 @media (max-width: 340px) {
-  section h1 {
-    top: 90px;
+  section.home h1 {
     font-size: 2.3rem;
   }
 }
@@ -268,14 +258,12 @@ section.about {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  overflow: hidden;
 }
 
 section.about p {
   margin-left: 5%;
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
-  overflow: hidden;
   font-size: 2.5rem;
 }
 
@@ -300,13 +288,6 @@ section.about p {
 }
 
 @media (orientation: portrait) and (max-width: 440px) {
-  section.about p {
-    font-size: 1.4rem;
-    padding-top: 50px;
-  }
-}
-
-@media (orientation: portrait) and (max-width: 380px) {
   section.about p {
     font-size: 1.4rem;
   }
@@ -385,6 +366,32 @@ section.about .animateDiv.animate {
 
 section.projects {
   overflow: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section.projects h1 {
+  position: static;
+  -ms-flex-preferred-size: 85%;
+      flex-basis: 85%;
+  height: 25%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
 }
 
 section.projects section.project {
@@ -397,22 +404,19 @@ section.projects section.project {
       -ms-flex-align: center;
           align-items: center;
   left: 50%;
-  top: 200px;
-  height: 75%;
   width: 85%;
+  height: calc(75% - 20px);
   padding: 20px;
   background-color: black;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   overflow: visible;
-  z-index: 0;
   -webkit-perspective: 400px;
           perspective: 400px;
 }
 
 @media (orientation: portrait) {
   section.projects section.project {
-    top: 140px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -421,44 +425,16 @@ section.projects section.project {
   }
 }
 
-@media (orientation: portrait) and (max-width: 330px) {
-  section.projects section.project {
-    height: 68%;
-  }
-}
-
-@media (orientation: portrait) and (min-height: 600px) {
-  section.projects section.project {
-    height: 70%;
-    top: 165px;
-  }
-}
-
-@media (orientation: portrait) and (min-width: 768px) {
-  section.projects section.project {
-    top: 200px;
-  }
-}
-
-@media (orientation: landscape) and (max-width: 1400px) {
-  section.projects section.project {
-    top: 170px;
-    height: 70%;
-  }
-}
-
-@media (orientation: landscape) and (max-width: 825px) {
-  section.projects section.project {
-    top: 90px;
-  }
-}
-
 section.projects section.project section.description, section.projects section.project section.demo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: static;
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
   height: 70%;
   opacity: 1;
+  overflow: hidden;
 }
 
 @media (orientation: landscape) and (max-width: 1400px) {
@@ -476,9 +452,6 @@ section.projects section.project section.description, section.projects section.p
 }
 
 section.projects section.project section.description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -527,9 +500,6 @@ section.projects section.project section.description p {
 }
 
 section.projects section.project section.demo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -ms-flex-line-pack: center;
@@ -545,7 +515,6 @@ section.projects section.project section.demo {
   transition: .6s linear;
   -webkit-box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.3);
           box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.3);
-  overflow: hidden;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   -webkit-transform: rotateY(-10deg);
@@ -589,20 +558,13 @@ section.projects section.project section.demo a, section.projects section.projec
   background-color: black;
   font-size: 2rem;
   border: 1px solid white;
-  outline-color: white;
+  outline: none;
   border-radius: 0;
 }
 
-@media (orientation: portrait) {
-  section.projects section.project section.demo a, section.projects section.project section.demo p {
-    outline: none;
-  }
-}
-
-@media (max-width: 900px) {
-  section.projects section.project section.demo a, section.projects section.project section.demo p {
-    outline: none;
-  }
+section.projects section.project section.demo a:focus, section.projects section.project section.demo p:focus {
+  -webkit-box-shadow: 0px 0px 2px 2px white;
+          box-shadow: 0px 0px 2px 2px white;
 }
 
 @media (orientation: landscape) and (max-width: 1400px) {
@@ -823,7 +785,7 @@ section.projects .btn-next, section.projects .btn-prev {
   background-color: black;
   font-size: 2rem;
   border: 1px solid white;
-  outline-color: white;
+  outline: none;
   border: none;
   border-radius: 50%;
   font-size: 3rem;
@@ -835,16 +797,9 @@ section.projects .btn-next, section.projects .btn-prev {
   -webkit-tap-highlight-color: transparent;
 }
 
-@media (orientation: portrait) {
-  section.projects .btn-next, section.projects .btn-prev {
-    outline: none;
-  }
-}
-
-@media (max-width: 900px) {
-  section.projects .btn-next, section.projects .btn-prev {
-    outline: none;
-  }
+section.projects .btn-next:focus, section.projects .btn-prev:focus {
+  -webkit-box-shadow: 0px 0px 2px 2px white;
+          box-shadow: 0px 0px 2px 2px white;
 }
 
 section.projects .btn-next:hover, section.projects .btn-prev:hover {
@@ -885,28 +840,36 @@ section.projects .btn-prev {
 }
 
 section.contact {
-  position: relative;
-  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-@media (orientation: portrait) {
-  section.contact {
-    height: 90vh;
-  }
-}
-
-@media (orientation: landscape) and (max-width: 825px) {
-  section.contact {
-    height: 90vh;
-  }
+section.contact h1 {
+  position: static;
+  -ms-flex-preferred-size: 85%;
+      flex-basis: 85%;
+  height: 25%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
 }
 
 section.contact .scene {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   width: 20vw;
   height: 20vw;
   -webkit-perspective: 600px;
@@ -1153,11 +1116,8 @@ section.contact .scene .cube.show-bottom {
 }
 
 section.contact div.rotate-btns {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  height: 70px;
-  width: 50%;
+  height: 20%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1168,20 +1128,11 @@ section.contact div.rotate-btns {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 @media (orientation: portrait) {
   section.contact div.rotate-btns {
     width: 95%;
-  }
-}
-
-@media (orientation: landscape) and (max-width: 825px) {
-  section.contact div.rotate-btns {
-    width: 80%;
-    bottom: 15px;
   }
 }
 
@@ -1199,21 +1150,14 @@ section.contact div.rotate-btns .rotate-btn {
   background-color: black;
   font-size: 2rem;
   border: 1px solid white;
-  outline-color: white;
+  outline: none;
   border-radius: 0%;
   font-size: 20px;
 }
 
-@media (orientation: portrait) {
-  section.contact div.rotate-btns .rotate-btn {
-    outline: none;
-  }
-}
-
-@media (max-width: 900px) {
-  section.contact div.rotate-btns .rotate-btn {
-    outline: none;
-  }
+section.contact div.rotate-btns .rotate-btn:focus {
+  -webkit-box-shadow: 0px 0px 2px 2px white;
+          box-shadow: 0px 0px 2px 2px white;
 }
 
 section.contact div.rotate-btns .rotate-btn:hover {
@@ -1230,30 +1174,17 @@ section.contact div.rotate-btns .rotate-btn:hover {
   }
 }
 
-.projects h1, .contact h1 {
-  top: 10%;
-  left: 50%;
-  width: auto;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  padding: 0;
-}
-
-@media (orientation: portrait) {
-  .projects h1, .contact h1 {
-    top: 70px;
-  }
-}
-
-@media (orientation: portrait) and (min-height: 600px) {
-  .projects h1, .contact h1 {
-    top: 100px;
-  }
-}
-
-@media (orientation: landscape) and (max-width: 825px) {
-  .projects h1, .contact h1 {
-    top: 20px;
-  }
+.cube-container {
+  width: 100%;
+  height: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=styles.css.map */
