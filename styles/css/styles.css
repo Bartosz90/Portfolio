@@ -1283,7 +1283,7 @@ section.contact div.rotate-btns .rotate-btn:hover {
   }
 }
 
-@medua (orientation: landscape) and (max-height: 200px) {
+@media (orientation: landscape) and (max-height: 200px) {
   .cube-container .form {
     width: 90vw;
     height: 260px;
