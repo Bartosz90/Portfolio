@@ -47,7 +47,7 @@ body
     height: 70px 
     top: 0
     left: 0 
-    z-index: 5 
+    z-index: 2
     transition: .3s linear
     display: flex
     justify-content: flex-start
@@ -537,14 +537,17 @@ section.contact
             width: 600px 
             height: 800px 
         @media (orientation: portrait) and (max-width: 900px)
-            width: 280px
-            height: 450px
+            width: 80vw
+            height: 80vh
         @media (orientation: landscape) and (max-width: 900px)
             flex-direction: column
             align-items: flex-start
             justify-content: space-around
             width: 90vw
             height: 70vh 
+        @medua (orientation: landscape) and (max-height: 200px) 
+            width: 90vw 
+            height: 260px
         input, textarea, button[type="submit"]
             width: 90% 
             @media (orientation: portrait)
@@ -592,5 +595,6 @@ section.contact
     background-color: rgba(0,0,0,.8)  
     transition: .3s linear
     transform: scale(0)
+    z-index: 3
 .form-container.active 
     transform: scale(1)
