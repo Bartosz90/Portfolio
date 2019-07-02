@@ -189,12 +189,6 @@ body {
   overflow: hidden;
 }
 
-@media (max-width: 900px) {
-  .main {
-    height: 95vh;
-  }
-}
-
 section {
   position: absolute;
   width: 100%;
@@ -1233,5 +1227,166 @@ section.contact div.rotate-btns .rotate-btn:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.cube-container .form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 25vw;
+  height: 60vh;
+  padding: 10px;
+  background-color: black;
+  border: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .cube-container .form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.cube-container .form input, .cube-container .form textarea, .cube-container .form button[type="submit"] {
+  width: 90%;
+}
+
+@media (orientation: portrait) {
+  .cube-container .form input, .cube-container .form textarea, .cube-container .form button[type="submit"] {
+    width: 80%;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .cube-container .form input, .cube-container .form textarea, .cube-container .form button[type="submit"] {
+    width: 45%;
+  }
+}
+
+.cube-container .form input, .cube-container .form button[type="submit"] {
+  height: 10%;
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .cube-container .form input, .cube-container .form button[type="submit"] {
+    height: 20%;
+  }
+}
+
+.cube-container .form textarea {
+  height: 60%;
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .cube-container .form textarea {
+    height: 70%;
+  }
+}
+
+.cube-container .form button[type="submit"] {
+  border-radius: 12%;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  border-radius: 0;
+}
+
+.cube-container .form button[type="submit"]:focus {
+  -webkit-box-shadow: 0px 0px 2px 2px white;
+          box-shadow: 0px 0px 2px 2px white;
+}
+
+.cube-container .form button[type="submit"]:hover {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .cube-container .form button[type="submit"] {
+    width: 30%;
+  }
+}
+
+.cube-container .form input, .cube-container .form textarea {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.cube-container .form .close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(40%, -40%);
+          transform: translate(40%, -40%);
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+.cube-container .form .close-btn:hover {
+  color: black;
+  background-color: white;
+}
+
+@media (orientation: portrait) {
+  .cube-container .form {
+    width: 90vw;
+    height: 70vh;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .cube-container .form {
+    width: 90vw;
+    height: 70vh;
+  }
+}
+
+.form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.form-container.active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 /*# sourceMappingURL=styles.css.map */

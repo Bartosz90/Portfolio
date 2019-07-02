@@ -119,8 +119,6 @@ body
     width: 100vw
     height: 100vh
     overflow: hidden
-    @media (max-width: 900px)
-        height: 95vh
 section
     position: absolute
     width: 100% 
@@ -521,3 +519,76 @@ section.contact
     display: flex 
     justify-content: center 
     align-items: center
+    .form 
+        position: absolute 
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        width: 25vw
+        height: 60vh
+        padding: 10px
+        background-color: black
+        border: 1px solid white
+        display: flex
+        justify-content: center
+        align-items: flex-end
+        flex-wrap: wrap
+        @media (orientation: landscape) and (max-width: 900px)
+            flex-direction: column
+            align-items: flex-start
+            justify-content: space-around
+        input, textarea, button[type="submit"]
+            width: 90% 
+            @media (orientation: portrait)
+                width: 80%
+            @media (orientation: landscape) and (max-width: 900px)
+                width: 45%
+        input, button[type="submit"]
+            height: 10%
+            @media (orientation: landscape) and (max-width: 900px)
+                height: 20%
+        textarea
+            height: 60%
+            @media (orientation: landscape) and (max-width: 900px)
+                height: 70%
+        button[type="submit"]
+            +buttons()
+            border-radius: 0
+            &:hover 
+                +buttonHover()
+            @media (orientation: landscape) and (max-width: 900px)
+                width: 30%
+        input, textarea
+            padding: 10px   
+            font-size: 20px
+        .close-btn 
+            position: absolute 
+            top: 0
+            right: 0
+            transform: translate(40%, -40%)
+            font-size: 2rem
+            cursor: pointer
+            color: white
+            background-color: black
+            border-radius: 50%
+            transition: .3s linear
+            &:hover
+                color: black
+                background-color: white
+        @media (orientation: portrait) 
+            width: 90vw 
+            height: 70vh
+        @media (orientation: landscape) and (max-width: 900px)
+            width: 90vw
+            height: 70vh 
+.form-container 
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    background-color: rgba(0,0,0,.8)  
+    transition: .3s linear
+    transform: scale(0)
+.form-container.active 
+    transform: scale(1)

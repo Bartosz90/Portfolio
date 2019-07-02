@@ -130,3 +130,15 @@ const rotateCube = e => {
 [...document.querySelectorAll(".rotate-btn")].forEach(btn => {
   btn.addEventListener("click", rotateCube);
 });
+
+//email form
+
+document.querySelector(".email").addEventListener("click", () => {
+  document.querySelector(".form-container").classList.toggle("active");
+});
+
+document.querySelectorAll(".close-form").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelector(".form-container").classList.toggle("active");
+  });
+});
