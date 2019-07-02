@@ -611,8 +611,8 @@ section.projects section.project section.demo a:hover, section.projects section.
 }
 
 section.projects section.project section.demo a {
-  -webkit-transform: translateY(400%) rotateY(-10deg);
-          transform: translateY(400%) rotateY(-10deg);
+  -webkit-transform: translateY(450%) rotateY(-10deg);
+          transform: translateY(450%) rotateY(-10deg);
 }
 
 @media (orientation: portrait) {
@@ -641,8 +641,8 @@ section.projects section.project section.demo a {
 }
 
 section.projects section.project section.demo a:nth-of-type(1) {
-  -webkit-transform: translateY(-400%) rotateY(-10deg);
-          transform: translateY(-400%) rotateY(-10deg);
+  -webkit-transform: translateY(-450%) rotateY(-10deg);
+          transform: translateY(-450%) rotateY(-10deg);
 }
 
 @media (orientation: landscape) and (max-width: 1024px) {
