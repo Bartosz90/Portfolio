@@ -122,6 +122,7 @@ const changeProject = e => {
 });
 
 //cube rotate
+
 const rotateCube = e => {
   const cube = document.querySelector(".cube");
   cube.className = `${e.target.dataset.rotate}`;
