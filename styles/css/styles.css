@@ -613,6 +613,7 @@ section.projects section.project section.demo a:hover, section.projects section.
 section.projects section.project section.demo a {
   -webkit-transform: translateY(450%) rotateY(-10deg);
           transform: translateY(450%) rotateY(-10deg);
+  visibility: hidden;
 }
 
 @media (orientation: portrait) {
@@ -629,6 +630,7 @@ section.projects section.project section.demo a {
   section.projects section.project section.demo a {
     -webkit-transform: translateY(0%) rotateY(-10deg);
             transform: translateY(0%) rotateY(-10deg);
+    visibility: visible;
   }
 }
 
@@ -729,6 +731,7 @@ section.projects section.project section.demo p {
 section.projects section.project section.demo:hover > a {
   -webkit-transform: translateY(0%) rotateY(-10deg);
           transform: translateY(0%) rotateY(-10deg);
+  visibility: visible;
 }
 
 section.projects section.project section.quiz {
@@ -1398,5 +1401,13 @@ section.contact div.rotate-btns .rotate-btn:hover {
 .form-container.active {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.projects, .contact {
+  visibility: hidden;
+}
+
+.projects.active, .contact.active {
+  visibility: visible;
 }
 /*# sourceMappingURL=styles.css.map */

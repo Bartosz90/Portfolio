@@ -287,12 +287,14 @@ section.projects
                     flex-basis: 90%
             a   
                 transform: translateY(450%) rotateY(-10deg)
+                visibility: hidden
                 @media (orientation: portrait)
                     flex-basis: 43%
                     margin-top: 10px
                     animation: btn-shake 4s infinite 
                 @media (orientation: landscape) and (max-width: 1024px)
                     transform: translateY(0%) rotateY(-10deg)
+                    visibility: visible
             a:nth-of-type(2)
                 @media (orientation: portrait)
                     margin-left: 4%
@@ -325,6 +327,7 @@ section.projects
                 flex-basis: 100%
             &:hover>a
                 transform: translateY(0%) rotateY(-10deg)
+                visibility: visible
         section.quiz 
             background-image: url('../../images/quiz-large.png')
             &:hover
@@ -598,3 +601,8 @@ section.contact
     z-index: 3
 .form-container.active 
     transform: scale(1)
+
+.projects, .contact
+    visibility: hidden 
+.projects.active, .contact.active 
+    visibility: visible
