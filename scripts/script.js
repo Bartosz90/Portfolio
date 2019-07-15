@@ -55,7 +55,7 @@ document.querySelector(".hamburger-menu").addEventListener("click", () => {
 });
 //Home page heading typing
 
-const heading = `Hello, I'm Bartek. I love to code and design websites.`;
+const heading = `Hello, I'm Bartek. I design and create websites.`;
 const h1 = document.querySelector(".home h1");
 let counter = 0;
 headingTyper = () => {
