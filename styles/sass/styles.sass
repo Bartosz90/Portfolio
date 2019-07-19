@@ -292,6 +292,7 @@ section.projects
                     flex-basis: 43%
                     margin-top: 10px
                     animation: btn-shake 4s infinite 
+                    visibility: visible
                 @media (orientation: landscape) and (max-width: 1024px)
                     transform: translateY(0%) rotateY(-10deg)
                     visibility: visible
@@ -346,6 +347,24 @@ section.projects
                      background-image: url('../../images/floating-chars-large-blur.jpg')
             @media (orientation: portrait) 
                 background-image: url('../../images/floating-chars-small1.jpg')
+        section.spa 
+            background-image: url('../../images/spa-large.png')
+            &:hover
+                     background-image: url('../../images/spa-large-blur.jpg')
+            @media (orientation: portrait) 
+                background-image: url('../../images/spa-small1.jpg')
+        section.api 
+            background-image: url('../../images/api-large.png')
+            &:hover
+                     background-image: url('../../images/api-large-blur.jpg')
+            @media (orientation: portrait) 
+                background-image: url('../../images/api-small1.jpg')
+        section.photo 
+            background-image: url('../../images/photo-large.png')
+            &:hover
+                     background-image: url('../../images/photo-large-blur.jpg')
+            @media (orientation: portrait) 
+                background-image: url('../../images/photo-small1.jpg')
         section.portfolio
             background-image: url('../../images/portfolio-large.png')
             &:hover
@@ -429,7 +448,7 @@ section.contact
                 i 
                     transition: .3s linear 
             p 
-                padding: 10px
+                padding: 2px
             .facebook:hover 
                 color: #3b5998
             .github:hover

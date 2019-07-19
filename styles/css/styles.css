@@ -623,6 +623,7 @@ section.projects section.project section.demo a {
     margin-top: 10px;
     -webkit-animation: btn-shake 4s infinite;
             animation: btn-shake 4s infinite;
+    visibility: visible;
   }
 }
 
@@ -773,6 +774,48 @@ section.projects section.project section.floating-chars:hover {
 @media (orientation: portrait) {
   section.projects section.project section.floating-chars {
     background-image: url("../../images/floating-chars-small1.jpg");
+  }
+}
+
+section.projects section.project section.spa {
+  background-image: url("../../images/spa-large.png");
+}
+
+section.projects section.project section.spa:hover {
+  background-image: url("../../images/spa-large-blur.jpg");
+}
+
+@media (orientation: portrait) {
+  section.projects section.project section.spa {
+    background-image: url("../../images/spa-small1.jpg");
+  }
+}
+
+section.projects section.project section.api {
+  background-image: url("../../images/api-large.png");
+}
+
+section.projects section.project section.api:hover {
+  background-image: url("../../images/api-large-blur.jpg");
+}
+
+@media (orientation: portrait) {
+  section.projects section.project section.api {
+    background-image: url("../../images/api-small1.jpg");
+  }
+}
+
+section.projects section.project section.photo {
+  background-image: url("../../images/photo-large.png");
+}
+
+section.projects section.project section.photo:hover {
+  background-image: url("../../images/photo-large-blur.jpg");
+}
+
+@media (orientation: portrait) {
+  section.projects section.project section.photo {
+    background-image: url("../../images/photo-small1.jpg");
   }
 }
 
@@ -986,7 +1029,7 @@ section.contact .scene div.cube__face a i {
 }
 
 section.contact .scene div.cube__face p {
-  padding: 10px;
+  padding: 2px;
 }
 
 section.contact .scene div.cube__face .facebook:hover {
