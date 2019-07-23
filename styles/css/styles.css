@@ -833,6 +833,20 @@ section.projects section.project section.portfolio:hover {
   }
 }
 
+section.projects section.project section.weather {
+  background-image: url("../../images/weather-large.png");
+}
+
+section.projects section.project section.weather:hover {
+  background-image: url("../../images/weather-large-blur.jpg");
+}
+
+@media (orientation: portrait) {
+  section.projects section.project section.weather {
+    background-image: url("../../images/weather-small1.jpg");
+  }
+}
+
 section.projects section.project.active {
   opacity: 1;
   z-index: 1;
