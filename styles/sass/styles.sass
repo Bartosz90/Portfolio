@@ -13,6 +13,8 @@
     outline: none
     &:focus 
         box-shadow: 0px 0px 2px 2px white
+        @media (max-width: 900px)
+            box-shadow: none
 =sectionHeader()
     position: static
     flex-basis: 85%
@@ -224,6 +226,23 @@ section.projects
         @media (orientation: portrait)
             justify-content: center
             perspective: none
+        .demo-highlighter 
+                position:  fixed
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
+                height: 10px
+                width: 10px
+                border-radius: 50%
+                z-index: 15
+                background-color: white
+                outline: none
+                visibility: hidden
+                &:focus ~ section.demo
+                    box-shadow: 0px 0px 2px 2px white
+                &:focus ~ section.demo a
+                    transform: translateY(0%) rotateY(-10deg)
+                    visibility: visible
         section.description, section.demo
             display: flex
             position: static
@@ -288,6 +307,8 @@ section.projects
             a   
                 transform: translateY(450%) rotateY(-10deg)
                 visibility: hidden
+                &:focus
+                     transform: translateY(0%) rotateY(-10deg)
                 @media (orientation: portrait)
                     flex-basis: 43%
                     margin-top: 10px
@@ -302,6 +323,8 @@ section.projects
                     animation-delay: 1s
             a:nth-of-type(1)
                 transform: translateY(-450%) rotateY(-10deg)
+                &:focus
+                    transform: translateY(0%) rotateY(-10deg)
                 @media (orientation: landscape) and (max-width: 1024px)
                     transform: translateY(0%) rotateY(-10deg)
             @keyframes btn-shake 
@@ -380,6 +403,8 @@ section.projects
     section.project.active 
         opacity: 1
         z-index: 1
+        .demo a
+            visibility: visible
     .btn-next, .btn-prev
         position: absolute
         top: 60% 
