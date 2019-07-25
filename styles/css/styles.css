@@ -869,17 +869,17 @@ section.projects section.project section.photo:hover {
   }
 }
 
-section.projects section.project section.portfolio {
-  background-image: url("../../images/portfolio-large.png");
+section.projects section.project section.candy {
+  background-image: url("../../images/candy-large.png");
 }
 
-section.projects section.project section.portfolio:hover {
-  background-image: url("../../images/portfolio-large-blur.jpg");
+section.projects section.project section.candy:hover {
+  background-image: url("../../images/candy-large-blur.jpg");
 }
 
 @media (orientation: portrait) {
-  section.projects section.project section.portfolio {
-    background-image: url("../../images/portfolio-small1.jpg");
+  section.projects section.project section.candy {
+    background-image: url("../../images/candy-small1.jpg");
   }
 }
 
