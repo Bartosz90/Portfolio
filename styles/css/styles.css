@@ -925,6 +925,20 @@ section.projects section.project section.timer:hover {
   }
 }
 
+section.projects section.project section.trivia {
+  background-image: url("../../images/trivia-large.png");
+}
+
+section.projects section.project section.trivia:hover {
+  background-image: url("../../images/trivia-large-blur.jpg");
+}
+
+@media (orientation: portrait) {
+  section.projects section.project section.trivia {
+    background-image: url("../../images/trivia-small1.jpg");
+  }
+}
+
 section.projects section.project.active {
   opacity: 1;
   z-index: 1;
