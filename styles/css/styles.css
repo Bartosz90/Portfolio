@@ -939,6 +939,20 @@ section.projects section.project section.trivia:hover {
   }
 }
 
+section.projects section.project section.tree {
+  background-image: url("../../images/tree-large.png");
+}
+
+section.projects section.project section.tree:hover {
+  background-image: url("../../images/tree-large-blur.jpg");
+}
+
+@media (orientation: portrait) {
+  section.projects section.project section.tree {
+    background-image: url("../../images/tree-small1.jpg");
+  }
+}
+
 section.projects section.project.active {
   opacity: 1;
   z-index: 1;
