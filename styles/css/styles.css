@@ -967,6 +967,20 @@ section.projects section.project section.smith:hover {
   }
 }
 
+section.projects section.project section.budimex {
+  background-image: url("../../images/budimex-large.png");
+}
+
+section.projects section.project section.budimex:hover {
+  background-image: url("../../images/budimex-large-blur.jpg");
+}
+
+@media (orientation: portrait) {
+  section.projects section.project section.budimex {
+    background-image: url("../../images/budimex-small1.jpg");
+  }
+}
+
 section.projects section.project.active {
   opacity: 1;
   z-index: 1;
